@@ -127,7 +127,7 @@ js具体模块代码可以访问[http://frozenui.github.io/frozenjs/](http://fro
 
 #### 1. 可以直接使用上面的 css 文件，注意1.2.0之后的bid改为306:
 
-````html
+````
  <link media="all" href="http://i.gtimg.cn/vipstyle/frozenui/1.2.0/css/frozen.css?_bid=306" rel="stylesheet">
  
   <link media="all" href="http://i.gtimg.cn/vipstyle/frozenui/1.2.0/css/vip.css?_bid=306" rel="stylesheet">
@@ -140,7 +140,7 @@ js具体模块代码可以访问[http://frozenui.github.io/frozenjs/](http://fro
 
 ####2. 针对非手Q用户可以使用cdn 和 combo 服务按需加载
 
-````html
+````
  <link media="all" href="http://i.gtimg.cn/c/=/vipstyle/frozenui/1.2.0/css/reset.css,/vipstyle/frozenui/1.2.0/css/ui-notice.css" rel="stylesheet">
 
 ````
@@ -158,14 +158,14 @@ js具体模块代码可以访问[http://frozenui.github.io/frozenjs/](http://fro
 
 ####1. 非模块化引用方式
 
-````html
+````
 <script src="http://i.gtimg.cn/vipstyle/frozenjs/lib/zepto.min.js?_bid=304"></script>
 <script src="http://i.gtimg.cn/vipstyle/frozenjs/1.0.0/frozen.js?_bid=304"></script>
 ````
 
 ####2. 模块化引用方式，这里的zepto必须是模块化后的
 
-````html
+````
 <script src="http://i.gtimg.cn/vipstyle/frozenjs/lib/sea.js?_bid=304"></script>
 <script type="text/javascript">
 seajs.config({
