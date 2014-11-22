@@ -29,7 +29,7 @@
     .ui-tab-content > li {
         -webkit-box-flex: 1;
         width: 100%;
-        height:500px;
+        height:300px;
     }
 </style>
 </head>
@@ -113,46 +113,71 @@
 </html>
 ````
 
-你会看到一个[demo页面](http://frozenui.github.io/iframe-start-1.html)，引用了[http://i.gtimg.cn/vipstyle/frozenui/1.2.0/css/frozen.css?_bid=306 
-](http://i.gtimg.cn/vipstyle/frozenui/1.1.0/css/frozen.css?_bid=306 
-)，这是打包了除了会员相关的基础css文件，使用手Q离线包需要加上bid的参数。
+你会看到一个[demo页面](http://frozenui.github.io/iframe-start-1.html),里面有引用frozenui的css和js。
 
 
-如果要使用 [vip等级图标](http://frozenui.github.io/baseui/ui-icon-viplevel) ，[qq等级图标](http://frozenui.github.io/baseui/ui-icon-qqlevel)，[角标](http://frozenui.github.io/baseui/ui-tag)，[好友选择器](http://frozenui.github.io/baseui/ui-selector)，则需另外引用打包了这几个组件的[http://i.gtimg.cn/vipstyle/frozenui/1.2.0/css/vip.css?_bid=306](http://i.gtimg.cn/vipstyle/frozenui/1.2.0/css/vip.css?_bid=306)。
+css具体模块的代码可以访问[http://frozenui.github.io/frozenui/](http://frozenui.github.io/frozenui/)
 
+js具体模块代码可以访问[http://frozenui.github.io/frozenjs/](http://frozenui.github.io/frozenjs/)
 
-还有一种引用方式，非手Q的页面可以引用[http://i.gtimg.cn/vipstyle/frozenui/1.2.0/css/global.css](http://i.gtimg.cn/vipstyle/frozenui/1.2.0/css/global.css) 文件，这个css打包了所有模块。
+[这里](http://frozenui.github.io/frozenui/history.html) 查看css历史版本修改记录。
 
-具体模块的代码可以访问[http://frozenui.github.io/baseui/](http://frozenui.github.io/baseui/)
-
-[这里](http://frozenui.github.io/baseui/history.html) 查看历史版本修改记录。
-
-## 如何引用
+## 正确使用css的方式
 
 
 #### 1. 可以直接使用上面的 css 文件，注意1.2.0之后的bid改为306:
 
-[http://i.gtimg.cn/vipstyle/frozenui/1.2.0/css/frozen.css?_bid=306](http://i.gtimg.cn/vipstyle/frozenui/1.1.0/css/frozen.css?_bid=306) 
-
-[http://i.gtimg.cn/vipstyle/frozenui/1.2.0/css/vip.css?_bid=306](http://i.gtimg.cn/vipstyle/frozenui/1.2.0/css/vip.css?_bid=306)
-
-这里提供一个未压缩的版本。
-
-   [http://i.gtimg.cn/vipstyle/frozenui/1.2.0/css-debug/frozen.css](http://i.gtimg.cn/vipstyle/frozenui/1.2.0/css-debug/frozen.css)
-
-####2.访问我们的github仓库
-
- [https://github.com/frozenui/baseui](https://github.com/frozenui/baseui)，自行 clone 到本地。
-
-####3. 使用cdn 和 combo 服务按需加载
+````html
+ <link media="all" href="http://i.gtimg.cn/vipstyle/frozenui/1.2.0/css/frozen.css?_bid=306" rel="stylesheet">
+ 
+  <link media="all" href="http://i.gtimg.cn/vipstyle/frozenui/1.2.0/css/vip.css?_bid=306" rel="stylesheet">
 
 ````
+
+前者是打包了除了会员相关的基础css文件，后者包括vip等级图标 ，qq等级图标，角标，好友选择器等会员相关的css组件，使用手Q离线包需要加上bid的参数。
+
+调试时可使用未压缩版，把css目录换成css-debug，如http://i.gtimg.cn/vipstyle/frozenui/1.2.0/css-debug/frozen.css
+
+####2. 针对非手Q用户可以使用cdn 和 combo 服务按需加载
+
+````html
  <link media="all" href="http://i.gtimg.cn/c/=/vipstyle/frozenui/1.2.0/css/reset.css,/vipstyle/frozenui/1.2.0/css/ui-notice.css" rel="stylesheet">
 
 ````
-手Q有离线包，不推荐这种方式
 
-####4. 下载地址
+####3. 直接下载
 
-另外提供下载地址，主要供非腾讯公司用户使用：[http://frozenui.github.io/baseui/static/frozenui-1.2.0.zip](http://frozenui.github.io/baseui/static/frozenui-1.2.0.zip)
+另外提供下载地址，供非腾讯公司用户使用：[http://frozenui.github.io/frozenui/static/frozenui-1.2.0.zip](http://frozenui.github.io/frozenui/static/frozenui-1.2.0.zip)
 
+
+####4.访问我们的github仓库
+
+ [https://github.com/frozenui/frozenui](https://github.com/frozenui/frozenui)，自行 clone 到本地。
+ 
+## 正确使用js的方式
+
+####1. 非模块化引用方式
+
+````html
+<script src="http://i.gtimg.cn/vipstyle/frozenjs/lib/zepto.min.js?_bid=304"></script>
+<script src="http://i.gtimg.cn/vipstyle/frozenjs/1.0.0/frozen.js?_bid=304"></script>
+````
+
+####2. 模块化引用方式，这里的zepto必须是模块化后的
+
+````html
+<script src="http://i.gtimg.cn/vipstyle/frozenjs/lib/sea.js?_bid=304"></script>
+<script type="text/javascript">
+seajs.config({
+    alias:{
+        "$":"frozenjs/lib/zepto.min.js?_bid=304",
+        "frozen":"frozenjs/1.0.0/frozen.js?_bid=304"
+    }
+});
+</script>
+````
+####3.访问我们的github仓库
+
+[https://github.com/frozenui/frozenjs](https://github.com/frozenui/frozenjs)，自行 clone 到本地。
+
+_注意非腾讯公司用户请不要直接使用上述域名。_

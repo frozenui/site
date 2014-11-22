@@ -26,4 +26,4 @@ android 2.3 +，ios 4.0 + 。
 
 ###版本修改记录
 
-css http://frozenui.github.io/baseui/history.html
+css http://frozenui.github.io/frozenui/history.html
