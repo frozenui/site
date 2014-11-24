@@ -30,7 +30,12 @@ FrozenJS 包括： basic：FrozenJS 的一些基础功能，包括模板引擎�
 
 [css仓库](https://github.com/frozenui/frozenui)
 
+<div class="github-card" data-github="frozenui/frozenui" data-width="400" data-height="154" data-theme="default"></div>
+<script src="http://lab.lepture.com/github-cards/widget.js"></script>
+
 [js仓库](https://github.com/frozenui/frozenjs)
+<div class="github-card" data-github="frozenui/frozenjs" data-width="400" data-height="154" data-theme="default"></div>
+<script src="http://lab.lepture.com/github-cards/widget.js"></script>
 
 
 [css规范](http://frozenui.github.io/cssguide.html)
