@@ -44,8 +44,6 @@ FrozenJS 包括： basic：FrozenJS 的一些基础功能，包括模板引擎�
 
 欢迎提 [issue](https://github.com/frozenui/frozenui/issues) 给我们帮助我们完善FrozenUI。
 
-ps: 为了方便记忆和增添趣味性，我们为它取了动画片冰雪奇缘的英文名，并把Elsa女王作为我们的卡通代言人。
 
-<img src="../static/elsa.jpg">
 
 
