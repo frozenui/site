@@ -130,11 +130,11 @@ js具体模块代码可以访问[http://frozenui.github.io/frozenjs/](http://fro
 ````
  <link media="all" href="http://i.gtimg.cn/vipstyle/frozenui/1.2.0/css/frozen.css?_bid=306" rel="stylesheet">
  
-  <link media="all" href="http://i.gtimg.cn/vipstyle/frozenui/1.2.0/css/vip.css?_bid=306" rel="stylesheet">
+  <link media="all" href="http://i.gtimg.cn/vipstyle/frozenui/1.2.0/css/global.css?_bid=306" rel="stylesheet">
 
 ````
 
-前者是打包了除了会员相关的基础css文件，后者包括vip等级图标 ，qq等级图标，角标，好友选择器等会员相关的css组件，使用手Q离线包需要加上bid的参数。
+前者是打包了除了会员相关的基础css文件，后者还包括vip等级图标 ，qq等级图标，角标，好友选择器等会员相关的css组件，使用手Q离线包需要加上bid的参数。
 
 调试时可使用未压缩版，把css目录换成css-debug，如http://i.gtimg.cn/vipstyle/frozenui/1.2.0/css-debug/frozen.css
 
