@@ -164,7 +164,7 @@ js具体模块代码可以访问[http://frozenui.github.io/frozenjs/](http://fro
 
 ````
 <script src="http://i.gtimg.cn/vipstyle/frozenjs/lib/zepto.min.js?_bid=304"></script>
-<script src="http://i.gtimg.cn/vipstyle/frozenjs/1.0.0/frozen.js?_bid=304"></script>
+<script src="http://i.gtimg.cn/vipstyle/frozenjs/1.0.1/frozen.js?_bid=304"></script>
 ````
 
 ####2. 模块化引用方式，这里的zepto必须是模块化后的
@@ -175,7 +175,7 @@ js具体模块代码可以访问[http://frozenui.github.io/frozenjs/](http://fro
 seajs.config({
     alias:{
         "$":"frozenjs/lib/zepto.min.js?_bid=304",
-        "frozen":"frozenjs/1.0.0/frozen.js?_bid=304"
+        "frozen":"frozenjs/1.0.1/frozen.js?_bid=304"
     }
 });
 </script>
