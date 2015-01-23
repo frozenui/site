@@ -147,7 +147,7 @@ js具体模块代码可以访问[http://frozenui.github.io/frozenjs/](http://fro
 
 ####3. 直接下载
 
-另外提供下载地址，供非腾讯公司用户使用：[http://frozenui.github.io/frozenui/static/frozenui-1.2.0.zip](http://frozenui.github.io/frozenui/static/frozenui-1.2.0.zip)
+另外提供下载地址，供非腾讯公司用户使用：[http://frozenui.github.io/frozenui.zip](http://frozenui.github.io/frozenui.zip)
 
 
 ####4.访问我们的github仓库
