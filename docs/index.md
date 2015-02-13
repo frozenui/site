@@ -9,7 +9,7 @@
 		<img src="static/phones.png" class="fr-banner-ph">
 		<div class="fr-banner-btn">
 		<a href="/start.html">开始使用</a>
-		<a href="/frozenui.zip">下载</a>
+		<a href="https://github.com/frozenui/demo/archive/gh-pages.zip">下载</a>
 		</div>
 	</div>
 </div>
@@ -39,7 +39,6 @@
 		</div>
 	</div>
 </div>
-<div class="">
-</div>
+
 
 
