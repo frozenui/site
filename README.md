@@ -1,68 +1,81 @@
+# BayMaxUI文档
 
-# FrozenUI
-
-
-## 目录结构
-
-- sass/
-    + 存放 .scss 源码
-
-- css/
-    + frozen.css
-    
-- font/
-    + 存放 字体文件
-    
-- img/
-    + 存放 图片文件
-    
-- js/
-    + frozen.js
-
-- lib/
-    + 存放第三方依赖类库，如 zeptojs
-
-- doc/
-    + 代码规范
-
-- jsdoc/
-    + jsdoc生成的api文档
-
-- demo/
-    + 示例, 从 src/ 自动生成
-    
-- dist/
-    + 发布的文件
-
-- Gruntfile.js
-    + grunt 配置文件
+注意：生成文档时，BaymaxSite 需要与 BaymaxUI 处于同级目录。
 
 
 
-### 版本管理
+## 访问文档
 
-版本格式：主版本号.次版本号.修订号，版本号递增规则：
-
-主版本号：整体改版
-
-次版本号：功能性新增，bug修复
-
-修订号：bug或新功能的调试版本，只作为开发版本，不做正式发布
-
-当前版本在第一个使用的业务发布后不再修改，新增版本会新增一个离线包。
-
-_业务上使用时升级版本需要通知到开发，以及是否有dom修改，会不会影响到js_
-
-### 维护
-
-原则是有问题提issue，代码修改提pr，由faycheng合并以及内部发布
-
-###版本修改记录
-
-查看[http://frozenui.github.io/frozenui/history.html](http://frozenui.github.io/frozenui/history.html)
+### 访问动态文档
 
 
-###License
+动态网站含定制化功能，需要服务器环境支持。
 
- MIT License
+```
+$ grunt
+
+$ grunt open
+
+```
+
+打开浏览器访问 `http://127.0.0.1:8000`
+
+
+### 访问静态文档
+
+静态网站用于脱离服务器环境使用，无构建功能。
+
+打开浏览器访问 public/index.html
+
+
+
+### 生成文档
+
+自动生成文档需要保证 BaymaxSite 与 BaymaxUI 处于同级目录。
+
+执行以下命令会基于 config.js 生成文档所需要的数据：
+
+```
+
+// 1. 根据 config.js 中的配置生成数据到 data/*.js
+
+// 2. 根据 views/*.ejs 生成静态页面到 public/*.html
+
+$ grunt site
+
+```
+
+接着便可访问静态文档和动态网站
+
+
+### 一些说明
+
+数据配置在 config.js
+
+` grunt site ` 包含两个任务
+
+- `grunt generateDemoCodes ` 将使用配置 config.js 并抓取 BaymaxUI/demo/*.html 生成数据保存到 data/*.js 中
+
+- `grunt generateStaticHtmls ` 将使用配置 config.js 和 data/*.js 的数据，转换 views/*.ejs 为静态页面，保存到 public/*.html 中
+
+路由配置在 routes/index.js, 会使用配置 config.js 将 data/*.js 中的数据动态注入到 views/*.ejs 中
+
+
+自动生成文档需要注意以下几点：
+
+1. BaymaxUI/demo/*.html 按约定的 DOM 结构编写
+2. config.js 配置编写无误
+
+注意：
+
+以下这些文件为自动生成，勿直接修改：
+
+1. data/*
+2. public/*.html (如需修改 UI，修改 views/*.ejs)
+
+
+
+
+
+
 
