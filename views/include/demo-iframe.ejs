@@ -1,0 +1,13 @@
+<div class="demo-iframe-wrap" title="拖拽">
+
+    <div class="demo-iframe">
+        <% for(var i = 0; i < demos.length; i++ ) { %>
+        <div id="<%= demos[i].name %>">
+            <% for(var j = 0; j < demos[i].items.length; j++ ) { %>
+            <%- demos[i].items[j].html %>
+            <% } %>
+        </div>
+        <% } %>
+    </div>
+</div>
+<a href="#" class="hide-demo-btn">Demo</a>

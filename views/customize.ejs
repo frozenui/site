@@ -1,0 +1,52 @@
+<% include include/header.ejs%>
+
+<div class="main-area">
+    <div class="content-area">
+        <h1><%= title %></h1>
+        
+        <div class="content">
+            <br>
+            <h3><%= desc %></h3>
+            <br>
+            
+            <form id="custom-form" method="POST" action="customize">
+                    <button type="submit" class="btn-download">定制完成，立即下载</button>
+                    <% for (var p  in files ) { %>
+                        <h2><%= files[p].title %></h2>
+                        <% for(var i = 0; i < files[p].files.length; i++ ) { %>
+                        <div class="form-item">
+                            <!--<label>-->
+                                <!--<input type="checkbox" data-click="toggle" checked>-->
+                                <%= files[p].files[i].title %> |
+                            <!--</label>-->
+                            <% if (files[p].files[i].css) { %>
+                            <label>
+                                <input type="checkbox" name="css" value="<%= files[p].files[i].css %>" checked>
+                                <%= files[p].files[i].css %>.css
+                            </label>
+                             <% } %>
+                            <% if (files[p].files[i].js) { %> 
+                            <label>
+                                <input type="checkbox" name="js" value="<%= files[p].files[i].js %>" checked>
+                                <%= files[p].files[i].js %>.js
+                            </label>
+                            <% } %>
+                            <% if (files[p].files[i].zepto) { %> 
+                            <label>
+                                <input type="checkbox" name="zepto" value="<%= files[p].files[i].zepto %>" checked>
+                                <%= files[p].files[i].zepto %>.js
+                            </label>
+                            <% } %>
+                        </div>
+                        <% } %>
+                    <% } %>
+                        
+            </form>
+        </div>
+    </div>
+</div>
+
+<% include include/footer.ejs%>
+<script src="js/customize.js"></script>
+
+

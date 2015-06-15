@@ -1,0 +1,63 @@
+<% include include/header.ejs %>
+<div class="main-area">
+    <div class="side-area">
+        <ul>
+            <li><a href="#css3动效">CSS3动效</a></li>
+            <li><a href="#使用硬件传感器api">使用硬件传感器api</a></li>
+        </ul>
+    </div>
+    <div class="content-area">
+        <h1><%= title %></h1>
+
+        <div class="content">
+            <p><%= desc %></p>
+
+            <h2 id="css3动效">CSS3动效</h2>
+
+            <div class="jsmodule-content">
+                <ul id="cssCase" class="cwf-list">
+                    <% for(var i = 0; i < cases.csscase.length; i++ ) { %>
+                    <li>
+                        <div class="pic">
+                            <img alt="" src="<%= cases.csscase[i].pic %>" width="160"/>
+                        </div>
+                        <div class="cwfqr" data-url="<%= cases.csscase[i].url %>">
+                            <a href="<%= cases.csscase[i].url %>" target="_blank">
+                                <div class="qr"></div>
+                            </a>
+                        </div>
+                        <div class="desc">
+                            <div class="tit"><%= cases.csscase[i].tit %></div>
+                            <div class="author">来自<%= cases.csscase[i].author %></div>
+                        </div>
+                    </li>
+                    <% } %>
+                </ul>
+            </div>
+
+            <h2 id="使用硬件传感器api">使用硬件传感器api</h2>
+
+            <div class="js-module-content">
+                <ul id="apiCase" class="cwf-list">
+                    <% for(var i = 0; i < cases.apicase.length; i++ ) { %>
+                    <li>
+                        <div class="pic">
+                            <img alt="" src="<%= cases.apicase[i].pic %>" width="160"/>
+                        </div>
+                        <div class="cwfqr" data-url="<%= cases.apicase[i].url %>">
+                            <a href="<%= cases.apicase[i].url %>" target="_blank">
+                                <div class="qr"></div>
+                            </a>
+                        </div>
+                        <div class="desc">
+                            <div class="tit"><%= cases.apicase[i].tit %></div>
+                            <div class="author">来自<%= cases.apicase[i].author %></div>
+                        </div>
+                    </li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<% include include/footer.ejs %>
