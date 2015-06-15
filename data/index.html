@@ -1,0 +1,3081 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <title>FrozenUI Demo</title>
+        <script type="text/javascript" src="http://tajs.qq.com/stats?sId=37342703" charset="UTF-8"></script>
+        <link rel="stylesheet" href="../css/frozen.css">
+        <link rel="stylesheet" href="demo.css">
+        <script src="../lib/zeptojs/zepto.min.js"></script>
+        <script src="../js/frozen.js"></script>
+    </head>
+    
+    <body>
+        <header class="ui-header ui-header-positive ui-border-b">
+            <i class="ui-icon-return" onclick="history.back()"></i><h1>@@desc @@name</h1><button class="ui-btn">回首页</button>
+        </header>
+        <footer class="ui-footer ui-footer-btn">
+            <ul class="ui-tiled ui-border-t">
+                <li data-href="index.html" class="ui-border-r"><div>基础样式</div></li>
+                <li data-href="ui.html" class="ui-border-r"><div>UI组件</div></li>
+                <li data-href="js.html"><div>JS插件</div></li>
+            </ul>
+        </footer>
+        <section class="ui-container">
+
+
+
+
+
+
+<section id="type">
+    <div class="demo-item">
+        <p class="demo-desc">文本大小</p>
+        <div class="demo-block">
+            <div class="ui-whitespace">
+                <p>默认字体大小32px, 行高为1.5</p>
+                <h1>标题：h1, 36px</h1>
+                <h2>栏目：h2, 34px</h2>
+                <h3>内文：导航，正文段落h3, 32px</h3>
+                <h4>内文：人名歌名标题等h4, 32px</h4>
+                <h5>副内文：h5, 同ui-txt-sub, 28px</h5>
+                <h6>辅助文字：h6, 同ui-txt-tips, 24px</h6>
+                <p class="ui-txt-sub">副内文：ui-txt-sub</p>
+                <p class="ui-txt-tips">辅助文字：ui-txt-tips</p>
+            </div>
+        </div>
+    </div>    
+    <div class="demo-item">
+        <p class="demo-desc">文本颜色</p>
+        <div class="demo-block">
+            <div class="ui-whitespace">
+                <p class="ui-txt-default">主要内容色：ui-txt-default</p>
+                <p class="ui-txt-white" style="background:#000">主要内容反色：ui-txt-white</p>
+                <p class="ui-txt-info">辅助次要内容色：ui-txt-info</p>
+                <p class="ui-txt-muted">时间，输入框，不可点击状态文本色：ui-txt-muted</p>
+                <p class="ui-txt-warning">会员红名，警示，搜索热词：ui-txt-warning</p>
+                <p class="ui-txt-red">会员红名，搜索热词：ui-txt-red</p>
+                <p class="ui-txt-highlight">关键词高亮：ui-txt-highlight</p>
+                <p><em>高亮文本em</em></p>
+                <p><a>链接颜色a</a></p>
+                <p class="ui-txt-feeds">feeds链接：ui-txt-feeds</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        
+
+
+
+
+<section id="layout">
+    <div class="demo-item">
+        <p class="demo-desc">平铺</p>
+        <div class="demo-block">
+            <ul class="ui-tiled">
+                <li><div>菜单</div><i>1</i></li>
+                <li><div>菜单</div><i>2</i></li>
+                <li><div>菜单</div><i>3</i></li>
+            </ul>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">居中</p>
+        <div class="demo-block">
+            <div class="ui-center">
+                <p>垂直上下居中</p>
+                <p>垂直上下居中</p>
+            </div>
+            <div class="ui-center-hor">
+                <p>一行内垂直上下居中</p><p>一行内垂直上下居中</p>
+            </div>
+            
+        </div>
+    </div> 
+    <div class="demo-item">
+        <p class="demo-desc">布局1</p>
+        <div class="demo-block">
+            <header class="ui-header ui-header-stable ui-border-b">
+                <i class="ui-icon-return" onclick="history.back()"></i><h1>layout</h1><button class="ui-btn">回首页</button>
+            </header>
+            <footer class="ui-footer ui-footer-stable ui-border-t">
+                <ul class="ui-tiled">
+                    <li><div>菜单</div><i>1</i></li>
+                    <li><div>菜单</div><i>2</i></li>
+                    <li><div>菜单</div><i>3</i></li>
+                </ul>
+            </footer>
+            <section class="ui-container ui-center">
+                内容
+            </section>
+         </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">布局2</p>
+        <div class="demo-block">
+            <header class="ui-header ui-header-positive ui-border-b">
+                <h1>标题</h1>
+            </header>
+            <div class="ui-footer ui-footer-stable ui-btn-group ui-border-t">
+                <button class="ui-btn-lg">
+                    拒绝
+                </button>
+                <button class="ui-btn-lg">
+                    拒绝
+                </button>
+                <button class="ui-btn-lg ui-btn-primary">
+                    同意
+                </button>
+            </div>
+            <section class="ui-container ui-center">
+                内容
+            </section>
+         </div>
+    </div> 
+</section>
+
+
+        
+
+
+
+<section id="grid">
+    <div class="demo-item">
+        <p class="demo-desc">float网格适合多行</p>
+        <div class="demo-block">
+            <ul class="ui-row">
+                <li class="ui-col ui-col-50">50</li>
+                <li class="ui-col ui-col-50">50</li>
+                <li class="ui-col ui-col-25">25</li>
+                <li class="ui-col ui-col-75">75</li>
+                <li class="ui-col ui-col-33">33</li>
+                <li class="ui-col ui-col-67">67</li>
+                <li class="ui-col ui-col-20">20</li>
+                <li class="ui-col ui-col-80">80</li>
+                <li class="ui-col ui-col-10">10</li>
+                <li class="ui-col ui-col-90">90</li>
+            </ul>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">flex网格</p>
+        <div class="demo-block">
+            <div class="ui-row-flex ui-whitespace">
+                <div class="ui-col ui-col">平均分</div>
+                <div class="ui-col ui-col">平均分</div>
+                <div class="ui-col ui-col">平均分</div>
+                <div class="ui-col ui-col">平均分</div>
+            </div>
+            <div class="ui-row-flex ui-whitespace">
+                <div class="ui-col ui-col-2">2/3</div>
+                <div class="ui-col">1/3</div>
+            </div>
+            <div class="ui-row-flex ui-whitespace">
+                <div class="ui-col ui-col-3">3/4</div>
+                <div class="ui-col">1/4</div>
+            </div>
+            <div class="ui-row-flex ui-whitespace">
+                <div class="ui-col ui-col-4">4/5</div>
+                <div class="ui-col">1/5</div>
+            </div>
+            <div class="ui-row-flex ui-whitespace">
+                <div class="ui-col ui-col-3">3/5</div>
+                <div class="ui-col ui-col-2">2/5</div>
+            </div>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">竖排flex</p>
+        <div class="demo-block">
+            <div class="ui-row-flex ui-whitespace ui-row-flex-ver">
+                <div class="ui-col">1/2</div>
+                <div class="ui-col">1/2</div>
+            </div>
+            <br>
+            <div class="ui-row-flex ui-whitespace ui-row-flex-ver">
+                <div class="ui-col ui-col-3">3/4</div>
+                <div class="ui-col">1/4</div>
+            </div>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">三列</p>
+        <div class="demo-block">
+            <ul class="ui-grid-trisect ui-border-b">
+                <li>
+                    <div class="ui-grid-trisect-img">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/190x284)"></span>
+                    </div>
+                    <h4>高尔夫 <span>2.3M</span></h4>
+                    <button class="ui-btn-s ui-btn-progress">免费</button>
+                </li>
+                <li>
+                    <div class="ui-grid-trisect-img">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/190x284)"></span>
+                    </div>
+                    <h4>高尔夫 <span>2.3M</span></h4>
+                    <button class="ui-btn-s ui-btn-progress">免费</button>
+                </li>
+                <li>
+                    <div class="ui-grid-trisect-img">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/190x284)"></span>
+                    </div>
+                    <h4>高尔夫 <span>2.3M</span></h4>
+                    <button class="ui-btn-s ui-btn-progress">免费</button>
+                </li>
+                <li>
+                    <div class="ui-grid-trisect-img">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/190x284)"></span>
+                    </div>
+                    <h4>高尔夫 <span>2.3M</span></h4>
+                    <button class="ui-btn-s ui-btn-progress">免费</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">两列</p>
+        <div class="demo-block">
+            <ul class="ui-grid-halve">
+                <li>
+                    <div class="ui-grid-halve-img">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/290x160)"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="ui-grid-halve-img">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/290x160)"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="ui-grid-halve-img">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/290x160)"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="ui-grid-halve-img">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/290x160)"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+        
+
+
+
+
+<section id="placehold">    
+    <div class="demo-item">
+        <p class="demo-desc">占位解决方案</p>
+        <div class="demo-item">
+            <p class="demo-desc">失去响应时，相对居中，默认高宽比为31.25%，重写需覆盖padding-top属性</p>
+            <div class="demo-block">
+                <section class="ui-placehold">
+                    <div class="ui-placehold-cnt">正在加载中...</div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">图片占位</p>
+        <div class="demo-block">
+            <section class="ui-placehold ui-placehold-img">
+                <span style="background-image:url(http://placeholder.qiniudn.com/640x200)"></span>
+            </section>
+        </div>
+    </div>
+</section>
+
+
+        
+
+
+
+
+<section id="border">
+    
+    <div class="demo-item">
+        <p class="demo-desc">1px解决方案</p>
+        <div class="demo-block">
+            <ul class="ui-list-text border-list">
+                <li class="ui-border-t">上边框</li>
+                <li class="ui-border">边框</li>
+                <li class="ui-border-b">下边框</li>
+                <li class="ui-border-tb">上下边框</li>
+                <li class="ui-border-l">左边框</li>
+                <li class="ui-border-r">右边框</li>
+                <li class="ui-border-radius">
+                    圆角边框
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+        
+
+
+
+
+<section id="arrowlink">
+    <div class="demo-item">
+        <p class="demo-desc">箭头链接</p>
+        <div class="demo-block">
+            <div class="ui-arrowlink">箭头链接</div>
+        </div>
+    </div>
+</section>
+
+
+        
+
+
+
+
+<section id="nowrap">
+    <div class="demo-item">
+        <p class="demo-desc">一行文字截断</p>
+        <div class="demo-block">
+            <div class="ui-nowrap ui-txt-padding">
+                一行文字超出长度省略，内容文字超出长度省略，内容文字超出长度省略，内容文字超出长度省略，内容文字超出长度省略，内容文字超出长度省略，内容文字超出长度省略，内容文字超出长度省略，内容文字超出长度省略，内容文字超出长度省略，内容文字超出长度省略
+            </div>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">一行文字截断弹性布局</p>
+        <div class="demo-block">
+            <div class="ui-nowrap-flex ui-txt-padding">
+                一行文字超出长度省略，内容文字超出长度省略，内容文字超出长度省略，内容文字超出长度省略，内容文字超出长度省略，内容文字超出长度省略，内容文字超出长度省略，内容文字超出长度省略，内容文字超出长度省略，内容文字超出长度省略，内容文字超出长度省略
+            </div>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">多行文字截断，默认两行</p>
+        <div class="demo-block">
+            <div class="ui-nowrap-multi ui-txt-padding">
+                多行文字超出长度省略，内容文字超出长度省略，内容文字超出长度省略，内容文字超出长度省略，内容文字超出长度省略，内容文字超出长度省略，内容文字超出长度省略，内容文字超出长度省略，内容文字超出长度省略，内容文字超出长度省略，内容文字超出长度省略
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        
+
+
+
+
+<section id="whitespace">
+    <div class="demo-item">
+        <p class="demo-desc">两端留白,640以下10px，以上15px</p>
+        <div class="demo-block">
+            <ul class="ui-row ui-whitespace">
+                <li class="ui-col ui-col-50">50</li>
+                <li class="ui-col ui-col-50">50</li>
+            </ul>
+        </div>
+    </div>
+   
+</section>
+
+
+        
+
+
+
+
+<section id="justify">
+    <div class="demo-item">
+        <p class="demo-desc">text-align:justify两端对齐</p>
+        <div class="demo-block">  
+            <div class="ui-justify ui-whitespace">
+                <p class="demo-desc">一行</p>
+                <ul>
+                    <li><div class="test-img"></div><p>xxx</p></li>
+                    <li><div class="test-img"></div><p>xxx</p></li>
+                    <li><div class="test-img"></div><p>xxx</p></li>
+                    <li><div class="test-img"></div><p>xxx</p></li>
+                </ul>
+                <p class="demo-desc">多行</p>
+                <ul>
+                    <li><div class="test-img"></div><p>xxx</p></li>
+                    <li><div class="test-img"></div><p>xxx</p></li>
+                    <li><div class="test-img"></div><p>xxx</p></li>
+                    <li><div class="test-img"></div><p>xxx</p></li>
+                    <li><div class="test-img"></div><p>xxx</p></li>
+                    <li><div class="test-img"></div><p>xxx</p></li>
+                    <li><div class="test-img"></div><p>xxx</p></li>
+                    <li><div class="test-img"></div><p>xxx</p></li>
+                    <li><div class="test-img"></div><p>xxx</p></li>
+                    <li><div class="test-img"></div><p>xxx</p></li>
+                    <li><div class="test-img"></div><p>xxx</p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">弹性布局</p>
+        <div class="demo-block">
+            <ul class="ui-justify-flex ui-whitespace">
+                <li class="test-img"></li>
+                <li class="test-img"></li>
+                <li class="test-img"></li>
+                <li class="test-img"></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+        
+
+
+
+<section id="form">
+    <div class="demo-item">
+        <p class="demo-desc">ui-icon 图标</p>
+        <div class="demo-block">
+        <link rel="stylesheet" href="../css/icon-full.css">
+            <ul class="icon-lists clear">
+            
+                <li>
+                <i class="icon ui-icon">&#xe615;</i>
+                    <div class="name">add</div>
+                    <div class="code">&amp;#xe615;</div>
+                    <div class="fontclass">.ui-icon-add</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe616;</i>
+                    <div class="name">more</div>
+                    <div class="code">&amp;#xe616;</div>
+                    <div class="fontclass">.ui-icon-more</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe600;</i>
+                    <div class="name">arrow</div>
+                    <div class="code">&amp;#xe600;</div>
+                    <div class="fontclass">.ui-icon-arrow</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe614;</i>
+                    <div class="name">return</div>
+                    <div class="code">&amp;#xe614;</div>
+                    <div class="fontclass">.ui-icon-return</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe601;</i>
+                    <div class="name">checked</div>
+                    <div class="code">&amp;#xe601;</div>
+                    <div class="fontclass">.ui-icon-checked</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe602;</i>
+                    <div class="name">checked-s</div>
+                    <div class="code">&amp;#xe602;</div>
+                    <div class="fontclass">.ui-icon-checked-s</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe603;</i>
+                    <div class="name">info-block</div>
+                    <div class="code">&amp;#xe603;</div>
+                    <div class="fontclass">.ui-icon-info-block</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe604;</i>
+                    <div class="name">success-block</div>
+                    <div class="code">&amp;#xe604;</div>
+                    <div class="fontclass">.ui-icon-success-block</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe605;</i>
+                    <div class="name">warn-block</div>
+                    <div class="code">&amp;#xe605;</div>
+                    <div class="fontclass">.ui-icon-warn-block</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe606;</i>
+                    <div class="name">info</div>
+                    <div class="code">&amp;#xe606;</div>
+                    <div class="fontclass">.ui-icon-info</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe607;</i>
+                    <div class="name">success</div>
+                    <div class="code">&amp;#xe607;</div>
+                    <div class="fontclass">.ui-icon-success</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe608;</i>
+                    <div class="name">warn</div>
+                    <div class="code">&amp;#xe608;</div>
+                    <div class="fontclass">.ui-icon-warn</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe617;</i>
+                    <div class="name">next</div>
+                    <div class="code">&amp;#xe617;</div>
+                    <div class="fontclass">.ui-icon-next</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe618;</i>
+                    <div class="name">prev</div>
+                    <div class="code">&amp;#xe618;</div>
+                    <div class="fontclass">.ui-icon-prev</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe60d;</i>
+                    <div class="name">tag</div>
+                    <div class="code">&amp;#xe60d;</div>
+                    <div class="fontclass">.ui-icon-tag</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe60f;</i>
+                    <div class="name">tag-pop</div>
+                    <div class="code">&amp;#xe60f;</div>
+                    <div class="fontclass">.ui-icon-tag-pop</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe60e;</i>
+                    <div class="name">tag-s</div>
+                    <div class="code">&amp;#xe60e;</div>
+                    <div class="fontclass">.ui-icon-tag-s</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe609;</i>
+                    <div class="name">warn-lg</div>
+                    <div class="code">&amp;#xe609;</div>
+                    <div class="fontclass">.ui-icon-warn-lg</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe60a;</i>
+                    <div class="name">close</div>
+                    <div class="code">&amp;#xe60a;</div>
+                    <div class="fontclass">.ui-icon-close</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe619;</i>
+                    <div class="name">close-progress</div>
+                    <div class="code">&amp;#xe619;</div>
+                    <div class="fontclass">.ui-icon-close-progress</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe60b;</i>
+                    <div class="name">close-page</div>
+                    <div class="code">&amp;#xe60b;</div>
+                    <div class="fontclass">.ui-icon-close-page</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe61a;</i>
+                    <div class="name">emo</div>
+                    <div class="code">&amp;#xe61a;</div>
+                    <div class="fontclass">.ui-icon-emo</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe61b;</i>
+                    <div class="name">delete</div>
+                    <div class="code">&amp;#xe61b;</div>
+                    <div class="fontclass">.ui-icon-delete</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe60c;</i>
+                    <div class="name">search</div>
+                    <div class="code">&amp;#xe60c;</div>
+                    <div class="fontclass">.ui-icon-search</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe61c;</i>
+                    <div class="name">order</div>
+                    <div class="code">&amp;#xe61c;</div>
+                    <div class="fontclass">.ui-icon-order</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe61d;</i>
+                    <div class="name">news</div>
+                    <div class="code">&amp;#xe61d;</div>
+                    <div class="fontclass">.ui-icon-news</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe61e;</i>
+                    <div class="name">personal</div>
+                    <div class="code">&amp;#xe61e;</div>
+                    <div class="fontclass">.ui-icon-personal</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe61f;</i>
+                    <div class="name">dressup</div>
+                    <div class="code">&amp;#xe61f;</div>
+                    <div class="fontclass">.ui-icon-dressup</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe620;</i>
+                    <div class="name">cart</div>
+                    <div class="code">&amp;#xe620;</div>
+                    <div class="fontclass">.ui-icon-cart</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe621;</i>
+                    <div class="name">history</div>
+                    <div class="code">&amp;#xe621;</div>
+                    <div class="fontclass">.ui-icon-history</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe622;</i>
+                    <div class="name">wallet</div>
+                    <div class="code">&amp;#xe622;</div>
+                    <div class="fontclass">.ui-icon-wallet</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe623;</i>
+                    <div class="name">refresh</div>
+                    <div class="code">&amp;#xe623;</div>
+                    <div class="fontclass">.ui-icon-refresh</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe624;</i>
+                    <div class="name">thumb</div>
+                    <div class="code">&amp;#xe624;</div>
+                    <div class="fontclass">.ui-icon-thumb</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe625;</i>
+                    <div class="name">file</div>
+                    <div class="code">&amp;#xe625;</div>
+                    <div class="fontclass">.ui-icon-file</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe626;</i>
+                    <div class="name">hall</div>
+                    <div class="code">&amp;#xe626;</div>
+                    <div class="fontclass">.ui-icon-hall</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe627;</i>
+                    <div class="name">voice</div>
+                    <div class="code">&amp;#xe627;</div>
+                    <div class="fontclass">.ui-icon-voice</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe628;</i>
+                    <div class="name">unfold</div>
+                    <div class="code">&amp;#xe628;</div>
+                    <div class="fontclass">.ui-icon-unfold</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe629;</i>
+                    <div class="name">gototop</div>
+                    <div class="code">&amp;#xe629;</div>
+                    <div class="fontclass">.ui-icon-gototop</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe62a;</i>
+                    <div class="name">share</div>
+                    <div class="code">&amp;#xe62a;</div>
+                    <div class="fontclass">.ui-icon-share</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe62b;</i>
+                    <div class="name">home</div>
+                    <div class="code">&amp;#xe62b;</div>
+                    <div class="fontclass">.ui-icon-home</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe62c;</i>
+                    <div class="name">pin</div>
+                    <div class="code">&amp;#xe62c;</div>
+                    <div class="fontclass">.ui-icon-pin</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe62d;</i>
+                    <div class="name">star</div>
+                    <div class="code">&amp;#xe62d;</div>
+                    <div class="fontclass">.ui-icon-star</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe62e;</i>
+                    <div class="name">bugle</div>
+                    <div class="code">&amp;#xe62e;</div>
+                    <div class="fontclass">.ui-icon-bugle</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe62f;</i>
+                    <div class="name">trend</div>
+                    <div class="code">&amp;#xe62f;</div>
+                    <div class="fontclass">.ui-icon-trend</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe610;</i>
+                    <div class="name">unchecked</div>
+                    <div class="code">&amp;#xe610;</div>
+                    <div class="fontclass">.ui-icon-unchecked</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe611;</i>
+                    <div class="name">unchecked-s</div>
+                    <div class="code">&amp;#xe611;</div>
+                    <div class="fontclass">.ui-icon-unchecked-s</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe630;</i>
+                    <div class="name">play-active</div>
+                    <div class="code">&amp;#xe630;</div>
+                    <div class="fontclass">.ui-icon-play-active</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe631;</i>
+                    <div class="name">stop-active</div>
+                    <div class="code">&amp;#xe631;</div>
+                    <div class="fontclass">.ui-icon-stop-active</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe632;</i>
+                    <div class="name">play</div>
+                    <div class="code">&amp;#xe632;</div>
+                    <div class="fontclass">.ui-icon-play</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe633;</i>
+                    <div class="name">stop</div>
+                    <div class="code">&amp;#xe633;</div>
+                    <div class="fontclass">.ui-icon-stop</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe634;</i>
+                    <div class="name">set</div>
+                    <div class="code">&amp;#xe634;</div>
+                    <div class="fontclass">.ui-icon-set</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe635;</i>
+                    <div class="name">add-group</div>
+                    <div class="code">&amp;#xe635;</div>
+                    <div class="fontclass">.ui-icon-add-group</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe636;</i>
+                    <div class="name">add-people</div>
+                    <div class="code">&amp;#xe636;</div>
+                    <div class="fontclass">.ui-icon-add-people</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe637;</i>
+                    <div class="name">pc</div>
+                    <div class="code">&amp;#xe637;</div>
+                    <div class="fontclass">.ui-icon-pc</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe638;</i>
+                    <div class="name">scan</div>
+                    <div class="code">&amp;#xe638;</div>
+                    <div class="fontclass">.ui-icon-scan</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe613;</i>
+                    <div class="name">svip</div>
+                    <div class="code">&amp;#xe613;</div>
+                    <div class="fontclass">.ui-icon-svip</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe612;</i>
+                    <div class="name">vip</div>
+                    <div class="code">&amp;#xe612;</div>
+                    <div class="fontclass">.ui-icon-vip</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe639;</i>
+                    <div class="name">male</div>
+                    <div class="code">&amp;#xe639;</div>
+                    <div class="fontclass">.ui-icon-male</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe63a;</i>
+                    <div class="name">female</div>
+                    <div class="code">&amp;#xe63a;</div>
+                    <div class="fontclass">.ui-icon-female</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe63b;</i>
+                    <div class="name">collect</div>
+                    <div class="code">&amp;#xe63b;</div>
+                    <div class="fontclass">.ui-icon-collect</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe63c;</i>
+                    <div class="name">commented</div>
+                    <div class="code">&amp;#xe63c;</div>
+                    <div class="fontclass">.ui-icon-commented</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe63d;</i>
+                    <div class="name">like</div>
+                    <div class="code">&amp;#xe63d;</div>
+                    <div class="fontclass">.ui-icon-like</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe63e;</i>
+                    <div class="name">liked</div>
+                    <div class="code">&amp;#xe63e;</div>
+                    <div class="fontclass">.ui-icon-liked</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe63f;</i>
+                    <div class="name">comment</div>
+                    <div class="code">&amp;#xe63f;</div>
+                    <div class="fontclass">.ui-icon-comment</div>
+                </li>
+            
+                <li>
+                <i class="icon ui-icon">&#xe640;</i>
+                    <div class="name">collected</div>
+                    <div class="code">&amp;#xe640;</div>
+                    <div class="fontclass">.ui-icon-collected</div>
+                </li>
+            
+        </ul>
+
+    </div>
+    </div></section>
+
+
+        
+
+
+
+
+<section id="panel">
+    <div class="demo-item">
+        <p class="demo-desc">默认面板</p>
+        <div class="demo-block">
+            <section class="ui-panel">
+                <h2 class="ui-arrowlink">猜你喜欢<span class="ui-panel-subtitle">1328条</span></h2>
+                <ul class="ui-grid-trisect">
+                    <li>
+                        <div class="ui-border">
+                            <div class="ui-grid-trisect-img">
+                                <span style="background-image:url(http://placeholder.qiniudn.com/190x284)"></span>
+                            </div>
+                            <div class="ui-txt-padding">
+                                <h4 class="ui-nowrap-multi">长书名长书名长书名长书名长书名长书名长书名</h4>
+                                <h5 class="ui-nowrap">小仙</h5>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ui-border">
+                            <div class="ui-grid-trisect-img">
+                                <span style="background-image:url(http://placeholder.qiniudn.com/190x284)"></span>
+                            </div>
+                            <div class="ui-txt-padding">
+                                <h4 class="ui-nowrap-multi">长书名长书名长书名长书名长书名长书名长书名</h4>
+                                <h5 class="ui-nowrap">小仙</h5>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ui-border">
+                            <div class="ui-grid-trisect-img">
+                                <span style="background-image:url(http://placeholder.qiniudn.com/190x284)"></span>
+                            </div>
+                            <div class="ui-txt-padding">
+                                <h4 class="ui-nowrap-multi">长书名长书名长书名长书名长书名长书名长书名</h4>
+                                <h5 class="ui-nowrap">小仙</h5>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">卡片式面板，背景为白色</p>
+        <div class="demo-block">
+            <section class="ui-panel ui-panel-card ui-border-t">
+                <h2 class="ui-arrowlink"><span>评论</span><span class="ui-panel-subtitle">1328条</span><span class="ui-panel-title-tips">更多评论</span></h2>
+                <ul class="ui-list ui-list-pure ui-border-tb">
+                    <li class="ui-border-t">
+                        <p><span>1.faycheng </span><span class="date"> 2月12日</span></p>
+                        <h4>这本书太赞了，每次看都有不一样的体会和感悟，超级喜欢！期待大结局。</h4>
+                    </li>
+                    <li class="ui-border-t">
+                        <p><span>2.faycheng </span><span class="date"> 2月12日</span></p>
+                        <h4>标题标题标题标题标题标题题标题标题标题标题标题标题标题标题标题</h4>
+                    </li>
+                    <li class="ui-border-t">
+                        <p><span>3.faycheng </span><span class="date"> 2月12日</span></p>
+                        <h4>标题标题标题标题标题标题题标题标题标题标题标题标题标题标题标题</h4>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">简单版</p>
+        <div class="demo-block">
+            <section class="ui-panel ui-panel-pure ui-border-t">
+                <h3>历史搜索：</h3>
+                <ul class="ui-list ui-list-pure ui-border-tb">
+                    <li class="ui-border-t">
+                        <h5><span>1.faycheng </span><span class="date"> 2月12日</span></h5>
+                        <h4>这本书太赞了，每次看都有不一样的体会和感悟，超级喜欢！期待大结局。</h4>
+                    </li>
+                    <li class="ui-border-t">
+                        <h5><span>2.faycheng </span><span class="date"> 2月12日</span></h5>
+                        <h4>标题标题标题标题标题标题题标题标题标题标题标题标题标题标题标题</h4>
+                    </li>
+                    <li class="ui-border-t">
+                        <h5><span>3.faycheng </span><span class="date"> 2月12日</span></h5>
+                        <h4>标题标题标题标题标题标题题标题标题标题标题标题标题标题标题标题</h4>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</section>
+
+
+        
+
+
+
+
+<section id="btn">
+    <div class="demo-item">
+        <p class="demo-desc">普通小按钮</p>
+        <div class="demo-block">
+            <div class="ui-btn-wrap">
+                <button class="ui-btn-s">
+                    确定
+                </button>
+                <button class="ui-btn-s active">
+                    确定
+                </button>
+                <button class="ui-btn-s disabled">
+                    取消
+                </button>
+                <button class="ui-btn-s" disabled>
+                    取消
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">普通按钮</p>
+        <div class="demo-block"> 
+            <div class="ui-btn-wrap">
+                <button class="ui-btn">
+                    确定
+                </button>
+                <button class="ui-btn active">
+                    确定
+                </button>
+                <button class="ui-btn disabled">
+                    取消
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">带进度的按钮</p>
+        <div class="demo-block"> 
+            <div class="ui-btn-wrap">
+                <button class="ui-btn ui-btn-progress">确定</button>
+                <button class="ui-btn ui-btn-progress">
+                    <span>50%</span>
+                    <span class="ui-btn-inner" style="width:50%"><span>50%</span></span>
+                </button>
+                <button class="ui-btn ui-btn-progress disabled">取消</button>
+            </div>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">蓝色按钮</p>
+        <div class="demo-block"> 
+            <div class="ui-btn-wrap">
+                <button class="ui-btn ui-btn-primary">
+                    确定
+                </button>
+                <button class="ui-btn ui-btn-primary active">
+                    确定
+                </button>
+                <button class="ui-btn disabled">
+                    取消
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">红色按钮</p>
+        <div class="demo-block"> 
+            <div class="ui-btn-wrap">
+                <button class="ui-btn ui-btn-danger">
+                    确定
+                </button>
+                <button class="ui-btn ui-btn-danger active">
+                    确定
+                </button>
+                <button class="ui-btn disabled">
+                    取消
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">普通大按钮</p>
+        <div class="demo-block"> 
+            <div class="ui-btn-wrap">
+                <button class="ui-btn-lg">
+                    确定
+                </button>
+            </div>
+            <div class="ui-btn-wrap">
+                <button class="ui-btn-lg active">
+                    确定
+                </button>
+            </div>
+            <div class="ui-btn-wrap">
+                <button class="ui-btn-lg disabled">
+                    取消
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">蓝色大按钮</p>
+        <div class="demo-block"> 
+            <div class="ui-btn-wrap">
+                <button class="ui-btn-lg ui-btn-primary">
+                    确定
+                </button>
+            </div>
+            <div class="ui-btn-wrap">
+                <button class="ui-btn-lg ui-btn-primary active">
+                    确定
+                </button>
+            </div>
+            <div class="ui-btn-wrap">
+                <button class="ui-btn-lg disabled">
+                    取消
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">红色大按钮</p>
+        <div class="demo-block"> 
+            <div class="ui-btn-wrap">
+                <button class="ui-btn-lg ui-btn-danger">
+                    确定
+                </button>
+            </div>
+            <div class="ui-btn-wrap">
+                <button class="ui-btn-lg ui-btn-danger active">
+                    确定
+                </button>
+            </div>
+            <div class="ui-btn-wrap">
+                <button class="ui-btn-lg disabled">
+                    取消
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">普通按钮组</p>
+        <div class="demo-block">  
+            <div class="ui-btn-group">
+                <button class="ui-btn-lg">
+                    拒绝
+                </button>
+                <button class="ui-btn-lg">
+                    拒绝
+                </button>
+                <button class="ui-btn-lg ui-btn-primary">
+                    同意
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">底部按钮组</p>
+        <div class="demo-block">       
+            <div class="ui-footer ui-footer-stable ui-btn-group ui-border-t">
+                <button class="ui-btn-lg">
+                    拒绝
+                </button>
+                <button class="ui-btn-lg">
+                    拒绝
+                </button>
+                <button class="ui-btn-lg ui-btn-primary">
+                    同意
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        
+
+
+
+
+<section id="avatar">
+    <div class="demo-item">
+        <p class="demo-desc">头像</p>
+        <div class="demo-block">
+            <ul class="ui-list ui-list-pure ui-border-tb">
+                <li class="ui-border-t">
+                    <h4>100*100头像</h4>
+                    <div class="ui-avatar">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/100x100)"></span>
+                    </div>
+                </li>
+                <li class="ui-border-t">
+                    <h4>80*80头像</h4>
+                    <div class="ui-avatar-s">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/80x80)"></span>
+                    </div>
+                </li>
+                <li class="ui-border-t">
+                    <h4>140*140头像</h4>
+                    <div class="ui-avatar-lg">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/140x140)"></span>
+                    </div>
+                    
+                </li>
+                <li class="ui-border-t">
+                    <h4>资料场景</h4>
+                    <div class="ui-avatar-one"><span style="background-image:url(http://placeholder.qiniudn.com/140x140)"></span></div>
+                </li>
+                <li class="ui-border-t">
+                    <h4>平铺头像</h4>
+                    <span class="ui-avatar-tiled"><span style="background-image:url(http://placeholder.qiniudn.com/60x60)"></span></span>
+                    <span class="ui-avatar-tiled"><span style="background-image:url(http://placeholder.qiniudn.com/60x60)"></span></span>
+                    <span class="ui-avatar-tiled"><span style="background-image:url(http://placeholder.qiniudn.com/60x60)"></span></span>
+                    <span class="ui-avatar-tiled"><span style="background-image:url(http://placeholder.qiniudn.com/60x60)"></span></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+        
+
+
+
+
+<section id="border">
+    <div class="demo-item">
+        <p class="demo-desc">徽标</p>
+        <div class="demo-block">
+            <div class="ui-reddot">内容内容</div>
+            <div class="ui-reddot-border">内容内容</div>
+            <div class="ui-reddot-s">内容内容</div>
+            <div class="ui-center-hor">内容内容<i class="ui-reddot ui-reddot-static"></i></div>
+        </div>
+    </div>
+</section>
+
+
+        
+
+
+
+
+<section id="border">
+    <div class="demo-item">
+        <p class="demo-desc">徽标</p>
+        <div class="demo-block">
+            <div class="ui-badge-muted">345</div>
+            <div class="ui-badge">123</div>
+            <div class="ui-badge-wrap" style="width: 100px;line-height: 50px;">带白边红点<div class="ui-badge-corner">new</div></div>
+            <div class="ui-badge-wrap" style="width: 100px;line-height: 50px;">数字红点<div class="ui-badge-cornernum">123</div></div>
+        </div>
+    </div>
+</section>
+
+
+        
+
+
+
+
+<section id="border">
+    <div class="demo-item">
+        <p class="demo-desc">标签</p>
+        <div class="demo-block">
+            <div class="ui-label-list">
+                <label class="ui-label">金庸</label>
+                <label class="ui-label">功夫</label>
+                <label class="ui-label">悬疑</label>
+                <label class="ui-label">盗墓笔记</label>
+                <label class="ui-label">欢乐谷</label>
+            </div>
+            <div class="ui-label-list">
+                <label class="ui-label-s">金庸</label>
+                <label class="ui-label-s">功夫</label>
+                <label class="ui-label-s">悬疑</label>
+                <label class="ui-label-s">盗墓笔记</label>
+                <label class="ui-label-s">欢乐谷</label>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        
+
+
+
+
+<section id="tag">
+    <div class="demo-item">
+        <p class="demo-desc">角标</p>
+        <div class="demo-block">
+            <ul class="ui-grid-halve">
+                <li>
+                    <div class="ui-grid-halve-img ui-tag-svip">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/290x160)"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="ui-grid-halve-img ui-tag-vip">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/290x160)"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="ui-grid-halve-img ui-tag-free">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/290x160)"></span>
+                    </div>
+
+                </li>
+                <li>
+                    <div class="ui-grid-halve-img ui-tag-freelimit">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/290x160)"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="ui-grid-halve-img ui-tag-last">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/290x160)"></span>
+                    </div>
+
+                </li>
+                <li>
+                    <div class="ui-grid-halve-img ui-tag-limit">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/290x160)"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="ui-grid-halve-img ui-tag-act">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/290x160)"></span>
+                    </div>
+
+                </li>
+                <li>
+                    <div class="ui-grid-halve-img ui-tag-xy">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/290x160)"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="ui-grid-halve-img">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/290x160)" class="ui-tag-hot"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="ui-grid-halve-img">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/290x160)" class="ui-tag-new"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="ui-grid-halve-img">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/290x160)" class="ui-tag-s-hot"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="ui-grid-halve-img">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/290x160)" class="ui-tag-s-new"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="ui-grid-halve-img">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/290x160)" class="ui-tag-pop-hot"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="ui-grid-halve-img">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/290x160)" class="ui-tag-pop-new"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="ui-grid-halve-img ui-tag-selected">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/290x160)" class="ui-tag-new"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="ui-grid-halve-img ui-tag-selected ui-tag-vip">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/290x160)"></span>
+                    </div>
+                </li>
+            </ul>
+            <p class="ui-tag-wrap">自定义主题<i class="ui-tag-vip"></i></p>
+        </div>
+    </div>
+</section>
+
+
+        
+
+
+
+
+<section id="searchbar">
+    <div class="demo-item">
+        <p class="demo-desc">搜索框</p>
+        <div class="demo-block">
+            <div class="ui-searchbar-wrap ui-border-b">
+                <div class="ui-searchbar ui-border-radius">
+                    <i class="ui-icon-search"></i>
+                    <div class="ui-searchbar-text">搜索号码（2-10位）</div>
+                    <div class="ui-searchbar-input"><input value="" type="tel" placeholder="搜索号码（2-10位）" autocapitalize="off"></div>
+                    <i class="ui-icon-close"></i>
+                </div>
+                <button class="ui-searchbar-cancel">取消</button>
+            </div>
+            <!-- <script src="http://i.gtimg.cn/vipstyle/frozenjs/1.0.1/frozen.js?_bid=304"></script> -->
+            <script src="js/frozen.js"></script>
+            <script type="text/javascript">
+                $('.ui-searchbar').tap(function(){
+                    $('.ui-searchbar-wrap').addClass('focus');
+                    $('.ui-searchbar-input input').focus();
+                });
+                $('.ui-searchbar-cancel').tap(function(){
+                    $('.ui-searchbar-wrap').removeClass('focus');
+                });
+            </script>
+        </div>
+    </div>
+</section>
+
+
+        
+
+
+
+<section id="list">
+    <div class="demo-item">
+        <p class="demo-desc">简单列表</p>
+        <div class="demo-block">
+            <ul class="ui-list ui-list-pure ui-border-tb">
+                <li class="ui-border-t">
+                    <p><span>1.faycheng </span><span class="date"> 2月12日</span></p>
+                    <h4>这本书太赞了，每次看都有不一样的体会和感悟，超级喜欢！期待大结局。</h4>
+                </li>
+                <li class="ui-border-t">
+                    <p><span>2.faycheng </span><span class="date"> 2月12日</span></p>
+                    <h4>标题标题标题标题标题标题题标题标题标题标题标题标题标题标题标题</h4>
+                </li>
+                <li class="ui-border-t">
+                    <p><span>3.faycheng </span><span class="date"> 2月12日</span></p>
+                    <h4>标题标题标题标题标题标题题标题标题标题标题标题标题标题标题标题</h4>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">文字列表</p>
+        <div class="demo-block">
+            <ul class="ui-list ui-list-text ui-border-tb">
+                <li class="ui-border-t">
+                    <h4 class="ui-nowrap">性别</h4>
+                    <div class="ui-txt-info">男</div>
+                </li>
+                <li class="ui-border-t">
+                    <h4 class="ui-nowrap">生日</h4>
+                    <div class="ui-txt-info">1988年8月8日</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">功能列表，active不再默认加上，用js加</p>
+        <div class="demo-block">
+            <ul class="ui-list ui-list-link ui-list-function ui-border-tb">
+                <li class="ui-border-t active">
+                    <div class="ui-list-thumb">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/100x100)"></span>
+                    </div>
+                    <div class="ui-list-info">
+                        <h4 class="ui-nowrap">ui-list-thumb缩略图</h4>
+                    </div>
+                </li>
+                <li class="ui-border-t">
+                    <div class="ui-list-thumb-s">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/56x56)"></span>
+                    </div>
+                    <div class="ui-list-info">
+                        <h4 class="ui-nowrap">ui-list-thumb-s缩略小图</h4>
+                    </div>
+                </li>
+                <li class="ui-border-t">
+                    <div class="ui-list-icon">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/80x80)"></span>
+                    </div>
+                    <div class="ui-list-info">
+                        <h4 class="ui-nowrap">ui-list-icon icon图</h4>
+                    </div>
+                </li>
+                <li class="ui-border-t">
+                    <div class="ui-list-icon">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/80x80)"></span>
+                    </div>
+                    <div class="ui-list-info">
+                        <h4 class="ui-nowrap">ui-list-icon icon图</h4>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">通栏和默认带active列表</p>
+        <div class="demo-block">
+            <ul class="ui-list ui-list-text ui-list-active ui-list-cover ui-border-tb">
+                <li class="ui-border-t">
+                    <p>加ui-list-active会带按压态</p>
+                </li>
+                <li class="ui-border-t">
+                    <p>加ui-list-cover通栏</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">带箭头的链接列表</p>
+        <div class="demo-block">
+            <ul class="ui-list  ui-list-text  ui-border-tb ui-list-link">
+                <li class="ui-border-t">
+                    <div class="ui-list-info">
+                        <h4 class="ui-nowrap">这是标题，加ui-nowrap可以超出长度截断</h4>
+                    </div>
+                    <div class="ui-badge">new</div>
+                </li>
+                <li class="ui-border-t">
+                    <div class="ui-list-info">
+                        <h4 class="ui-nowrap">这是标题，加ui-nowrap可以超出长度截断</h4>
+                    </div>
+                    <div class="ui-badge-muted">new</div>
+                </li>
+                <li class="ui-border-t">
+                    <div class="ui-list-info">
+                        <h4 class="ui-nowrap">这是标题，加ui-nowrap可以超出长度截断</h4>
+                    </div>
+                    <div class="ui-badge-num">123</div>
+                </li>
+                <li class="ui-border-t">
+                    <div class="ui-list-info">
+                        <h4 class="ui-nowrap">这是标题，加ui-nowrap可以超出长度截断</h4>
+                    </div>
+                    <div class="ui-reddot ui-reddot-static"></div>
+                </li>
+                <li class="ui-border-t">
+                    <div class="ui-list-info">
+                        <h4>标题标题标题标题标题标题标</h4>
+                    </div>
+                    <div class="ui-list-action">使用中</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">图文列表带头像</p>
+        <div class="demo-block">
+            <ul class="ui-list ui-border-tb">
+                <li class="ui-border-t">
+                    <div class="ui-avatar">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/100x100)"></span>
+                    </div>
+                    <div class="ui-list-info">
+                        <h4 class="ui-nowrap">这是标题，加ui-nowrap可以超出长度截断</h4>
+                        <p class="ui-nowrap">这是内容，加ui-nowrap可以超出长度截断</p>
+                    </div>
+                </li>
+                <li class="ui-border-t">
+                    <div class="ui-avatar">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/100x100)"></span>
+                    </div>
+                    <div class="ui-list-info">
+                        <h4 class="ui-nowrap">这是标题，加ui-nowrap可以超出长度截断</h4>
+                        <p class="ui-nowrap">这是内容，加ui-nowrap可以超出长度截断</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">图文列表带头像</p>
+        <div class="demo-block">
+            <ul class="ui-list ui-list-active ui-border-tb">
+                <li>
+                    <div class="ui-avatar">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/100x100)"></span>
+                    </div>
+                    <div class="ui-list-info ui-border-t">
+                        <h4 class="ui-nowrap">这是标题，加ui-nowrap可以超出长度截断</h4>
+                    </div>
+                </li>
+                <li>
+                    <div class="ui-avatar">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/100x100)"></span>
+                    </div>
+                    <div class="ui-list-info ui-border-t">
+                        <h4 class="ui-nowrap">这是标题，加ui-nowrap可以超出长度截断</h4>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">图文列表带小头像</p>
+        <div class="demo-block">
+            <ul class="ui-list ui-list-function ui-list-link ui-border-tb">
+                <li class="ui-border-t">
+                    <div class="ui-avatar-s">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/80x80)"></span>
+                    </div>
+                    <div class="ui-list-info">
+                        <h4 class="ui-nowrap">这是标题，加ui-nowrap可以超出长度截断</h4>
+                    </div>
+                    <div class="ui-btn">PK</div>
+                </li>
+                <li class="ui-border-t">
+                    <div class="ui-avatar-s">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/80x80)"></span>
+                    </div>
+                    <div class="ui-list-info">
+                        <h4 class="ui-nowrap">这是标题，加ui-nowrap可以超出长度截断</h4>
+                    </div>
+                    <div class="ui-btn">PK</div>
+                </li>
+            </ul>
+            </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">图文列表</p>
+        <div class="demo-block">
+            <ul class="ui-list ui-list-link ui-border-tb">
+                <li class="ui-border-t">
+                    <div class="ui-list-img">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/200x136)"></span>
+                    </div>
+                    <div class="ui-list-info">
+                        <h4 class="ui-nowrap">这是标题，加ui-nowrap可以超出长度截断</h4>
+                        <p class="ui-nowrap">这是内容，加ui-nowrap可以超出长度截断</p>
+                    </div>
+                </li>
+                <li class="ui-border-t">
+                    <div class="ui-list-img">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/200x136)"></span>
+                    </div>
+                    <div class="ui-list-info">
+                        <h4>标题标题标题标题标题标题标题标题标题标题标题</h4>
+                    </div>
+                </li>
+            </ul>
+            <div class="ui-loading-wrap">
+                <p>加载中</p>
+                <i class="ui-loading"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+ 
+        
+
+
+
+
+<section id="form">
+    <div class="demo-item">
+        <p class="demo-desc">命令表单项</p>
+        <div class="demo-block">
+            <div class="ui-form ui-border-t">
+                <form action="#">
+                    <div class="ui-form-item ui-form-item-order ui-border-b">
+                        <a href="#">清空消息列表</a>
+                    </div>
+                    <div class="ui-form-item ui-form-item-order ui-border-b">
+                        <a href="#">清空所有聊天记录</a>
+                    </div>
+                    <div class="ui-form-item ui-form-item-order ui-border-b">
+                        <a href="#">清空缓存数据</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">命令表单项</p>
+        <div class="demo-block">
+            <div class="ui-form ui-border-t">
+                <form action="#">
+                    <div class="ui-form-item ui-form-item-link ui-border-b">
+                        <a href="#">展示链接</a>
+                    </div>
+                    <div class="ui-form-item ui-form-item-link ui-border-b">
+                        <a href="#">展示链接</a>
+                    </div>
+                    <div class="ui-form-item ui-form-item-link ui-border-b">
+                        <a href="#">展示链接</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">表单输入项</p>
+        <div class="demo-block">
+            <div class="ui-form ui-border-t">
+                <form action="#">
+                    <div class="ui-form-item ui-border-b">
+                        <label>
+                            身份证号码
+                        </label>
+                        <input type="text" placeholder="18位身份证号码">
+                        <a href="#" class="ui-icon-close">
+                        </a>
+                    </div>
+                    <div class="ui-form-item ui-form-item-textarea ui-border-b">
+                        <label>
+                            详细地址
+                        </label>
+                        <textarea placeholder="街道等详细地址"></textarea>
+                    </div>
+                    <div class="ui-form-item ui-form-item-l ui-border-b">
+                        <label class="ui-border-r">
+                            中国 +86
+                        </label>
+                        <input type="text" placeholder="请输入手机号码">
+                        <a href="#" class="ui-icon-close">
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">表单输入项3</p>
+        <div class="demo-block">
+            <div class="ui-form ui-border-t">
+                <form action="#">
+                    <div class="ui-form-item ui-form-item-pure ui-border-b">
+                        <input type="text" placeholder="QQ号/手机号/邮箱">
+                        <a href="#" class="ui-icon-close"></a>
+                    </div>
+                    <div class="ui-form-item ui-form-item-pure ui-border-b">
+                        <input type="password" placeholder="密码">
+                        <a href="#" class="ui-icon-close"></a>
+                    </div>
+                    <div class="ui-form-item ui-form-item-r ui-border-b">
+                        <input type="text" placeholder="请输入验证码">
+                        <!-- 若按钮不可点击则添加 disabled 类 -->
+                        <button type="button" class="ui-border-l">重新发送</button>
+                        <a href="#" class="ui-icon-close"></a>
+                    </div>
+                </form>
+            </div>
+            </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">表单开关项</p>
+        <div class="demo-block">
+            <div class="ui-form ui-border-t">
+                <form action="#">
+                    <div class="ui-form-item ui-form-item-switch ui-border-b">
+                        <p>
+                            对附近的人可见
+                        </p>
+                        <label class="ui-switch">
+                            <input type="checkbox">
+                        </label>
+                    </div>
+                    <div class="ui-form-item ui-form-item-switch ui-border-b">
+                        <p>
+                            对附近的人可见
+                        </p>
+                        <label class="ui-switch">
+                            <input type="checkbox" checked>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">表单下拉框</p>
+        <div class="demo-block">
+            <div class="ui-form ui-border-t">
+                <form action="#">
+                    <div class="ui-form-item ui-border-b">
+                        <label>日期</label>
+                        <div class="ui-select-group">
+                            <div class="ui-select">
+                                <select>
+                                    <option>2014</option>
+                                    <option selected>2015</option>
+                                    <option>2016</option>
+                                </select>
+                            </div>
+                            <div class="ui-select">
+                                <select>
+                                    <option>03</option>
+                                    <option selected>04</option>
+                                    <option>05</option>
+                                </select>
+                            </div>
+                            <div class="ui-select">
+                                <select>
+                                    <option>21</option>
+                                    <option selected>22</option>
+                                    <option>23</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-form-item ui-border-b">
+                        <label>日期</label>
+                        <div class="ui-select">
+                            <select>
+                                <option>2014</option>
+                                <option selected>2015</option>
+                                <option>2016</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">表单单选项</p>
+        <div class="demo-block">
+            <div class="ui-form ui-border-t">
+                <form action="#">
+                    <div class="ui-form-item ui-form-item-radio ui-border-b">
+                        
+                        <label class="ui-radio" for="radio">
+                            <input type="radio" name="radio">
+                        </label>
+                        <p>表单中用于单选操作</p>
+                    </div>
+                    <div class="ui-form-item ui-form-item-radio ui-border-b">
+                        
+                        <label class="ui-radio" for="radio">
+                            <input type="radio" checked name="radio">
+                        </label>
+                        <p>表单中用于单选操作</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">表单多选项,普通列表中多选项</p>
+        <div class="demo-block">
+            <div class="ui-form ui-border-t">
+                <form action="#">
+                    <div class="ui-form-item ui-form-item-checkbox ui-border-b">
+                        <label class="ui-checkbox">
+                            <input type="checkbox">
+                        </label>
+                        <p>表单中用于多选操作</p>
+                    </div>
+                    <div class="ui-form-item ui-form-item-checkbox ui-border-b">
+                        <label class="ui-checkbox">
+                            <input type="checkbox" checked>
+                        </label>
+                        <p>表单中用于多选操作</p>
+                    </div>
+                </form>
+                <ul class="ui-list ui-list-text ui-list-checkbox ui-border-b">
+                    <li class="ui-border-t">
+                        <label class="ui-checkbox">
+                            <input type="checkbox">
+                        </label>
+                        <p>普通列表ui-list中用于多选操作</p>
+                    </li>
+                    <li class="ui-border-t">
+                        <label class="ui-checkbox">
+                            <input type="checkbox" checked>
+                        </label>
+                        <p>普通列表中用于多选操作</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">多选框</p>
+        <div class="demo-block">
+            <p> 
+                <label class="ui-checkbox-s">
+                    <input type="checkbox" name="checkbox" checked>
+                </label>
+                 我已阅读并同意
+            </p>
+            <p>
+                <label class="ui-checkbox-s">
+                    <input type="checkbox" name="checkbox" checked>
+                </label>
+                 我已阅读并同意
+            </p>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">普通列表中单选项</p>
+        <div class="demo-block">
+            <ul class="ui-list ui-list-text ui-list-radio ui-border-tb">
+                <li class="ui-border-t">
+                    <label class="ui-radio" for="radio">
+                        <input type="radio" name="radio">
+                    </label>
+                    <p>普通列表中用于单选操作</p>
+                </li>
+                <li class="ui-border-t">
+                    <label class="ui-radio" for="radio">
+                        <input type="radio" checked name="radio">
+                    </label>
+                    <p>普通列表中用于单选操作</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">普通输入框</p>
+        <div class="demo-block">
+            <section class="ui-input-wrap ui-border-t">
+                <div class="ui-input ui-border-radius">
+                    <input type="text" name="" value="" placeholder="我也说一句...">
+                </div>
+                <button class="ui-btn">评论</button>
+            </section>
+         </div>
+    </div>
+</section>
+
+        
+
+
+
+
+<section id="table">
+    <div class="demo-item">
+        <p class="demo-desc">默认</p>
+        <div class="demo-block">
+            <table class="ui-table ui-border-tb">
+                <thead>
+                <tr><th>已购买</th><th>状态</th><th>会员到期时间</th></tr>
+                </thead>
+                <tbody>
+                <tr><td>2014257777</td><td>使用中</td><td>2016-02-06</td></tr>
+                <tr><td>2014257777</td><td>待付款</td><td><a href="#">付款</a></td></tr>
+                <tr><td>2014257777</td><td>待付款</td><td><a href="#">付款</a></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">全框</p>
+        <div class="demo-block">
+            <table class="ui-table ui-border">
+                <thead>
+                <tr><th>已购买</th><th>状态</th><th>会员到期时间</th></tr>
+                </thead>
+                <tbody>
+                <tr><td>2014257777</td><td>使用中</td><td>2016-02-06</td></tr>
+                <tr><td>2014257777</td><td>待付款</td><td><a href="#">付款</a></td></tr>
+                <tr><td>2014257777</td><td>待付款</td><td><a href="#">付款</a></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+        
+
+
+
+
+<section id="notice">
+    <div class="demo-item">
+        <p class="demo-desc">通知</p>
+        <div class="demo-block">
+            <section class="ui-notice">
+                <i></i>
+                <p>请检查网络</p>
+                <div class="ui-notice-btn">
+                    <button class="ui-btn-primary ui-btn-lg">按钮</button>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+
+
+        
+
+
+
+
+<section id="tips">
+    
+    <div class="demo-item">
+        <p class="demo-desc">普通提示条</p>
+        <div class="demo-block">
+            <div class="ui-tips ui-tips-info">
+                <i></i><span>提供相关的信息或建议提供相关的信息或建议</span>
+            </div>
+            <div class="ui-tips ui-tips-warn">
+                <i></i><span>警示已经发生或可能在未来发生的问题警示已经发生或可能在未来发生的问题</span>
+            </div>
+            <div class="ui-tips ui-tips-success">
+                <i></i><span>提示操作成功或流程成功提示</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        
+
+
+
+
+<section id="tooltips">
+   
+    <div class="demo-item">
+        <p class="demo-desc">工具提示条</p>
+        <div class="demo-block">
+            <div class="ui-tooltips ui-tooltips-warn">
+                <div class="ui-tooltips-cnt ui-tooltips-cnt-link ui-border-b">
+                    <i></i>异常状态相关提示异常状态相关提示异常状态相关提示异常状态相关提示
+                </div>
+            </div>
+            <div class="ui-tooltips ui-tooltips-warn">
+                <div class="ui-tooltips-cnt ui-border-b">
+                    <i></i>客观情况告知客观情况告知客观情况告知客观情况告知<a class="ui-icon-close"></a>
+                </div>
+            </div>
+            <div class="ui-tooltips ui-tooltips-guide">
+                <div class="ui-tooltips-cnt ui-tooltips-cnt-link ui-border-b">
+                    <i class="ui-icon-talk"></i>进行时状态相关进行时状态相关进行时状态相关进行时状态相关
+                </div>
+            </div>
+            <div class="ui-tooltips ui-tooltips-guide">
+                <div class="ui-tooltips-cnt ui-border-b">
+                    <i></i>新手引导、新功能推荐、广告推广等。新手引导、新功能推荐、广告推广等。<a class="ui-icon-close"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        
+
+
+
+
+<section id="tips-new">
+    <div class="demo-item">
+        <p class="demo-desc">新消息提示</p>
+        <div class="demo-block">
+            <div class="ui-newstips-wrap">
+                <div class="ui-newstips">
+                    <span class="ui-avatar-tiled">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/60x60)"></span>
+                    </span>
+                    <div>新消息新消息新消息新消息新消息新消息新消息新消息</div>
+                    <span class="ui-reddot ui-reddot-static"></span>
+                </div>
+            </div>
+            <div class="ui-newstips-wrap">
+                <div class="ui-newstips">
+                    <span class="ui-newstips-thumb">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/60x60)"></span>
+                    </span>
+                    <div>新消息</div>
+                    <span class="ui-badge-num">123</span>
+                </div>
+            </div>
+            <div class="ui-newstips-wrap">
+                <div class="ui-newstips">
+                    <i></i>
+                    <div>新消息</div>
+                    <span class="ui-badge-num">123</span>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+        
+
+
+
+
+<section id="poptips">
+    <div class="demo-item">
+        <p class="demo-desc">浮层提示条</p>
+        <div class="demo-block">
+            <div class="ui-poptips ui-poptips-success">
+                <div class="ui-poptips-cnt"><i></i>温馨提示内容</div>
+            </div>
+            <div class="ui-poptips ui-poptips-info">
+                <div class="ui-poptips-cnt"><i></i>温馨提示内容</div>
+            </div>
+            <div class="ui-poptips ui-poptips-warn">
+                <div class="ui-poptips-cnt"><i></i>温馨提示内容</div>
+            </div>
+        </div>
+    </div>
+    <div class="ui-btn" id="btn1">弹出普通提示条</div>
+    <div class="ui-btn" id="btn2">弹出警示提示条</div>
+    <div class="ui-btn" id="btn3">弹出成功提示条</div>
+    <script type="text/javascript">
+        var el,el2,el3;
+        $("#btn1").click(function(){
+            el=$.tips({
+                content:'温馨提示内容',
+                stayTime:2000,
+                type:"success"
+            })
+            el.on("tips:hide",function(){
+                console.log("tips hide");
+            })
+
+        });
+        $("#btn2").click(function(){
+            el2=$.tips({
+                content:'温馨提示内容',
+                stayTime:2000,
+                type:"info"
+            })
+            el2.on("tips:hide",function(){
+                console.log("tips hide");
+            })
+        });
+        $("#btn3").click(function(){
+            el3=$.tips({
+                content:'温馨提示内容',
+                stayTime:2000,
+                type:"warn"
+            })
+            el3.on("tips:hide",function(){
+                console.log("tips hide");
+            })
+        });
+    </script>
+    
+</section>
+
+
+        
+
+
+
+
+<section id="selector">
+  <div class="demo-item">
+    <p class="demo-desc">好友选择器</p>
+    <div class="demo-block">
+      <section class="ui-selector">
+        <header class="ui-border-b">
+          <h3>选择好友</h3>
+        </header>
+        <div class="ui-selector-content" style="display:">
+          <ul>
+            <li class="ui-selector-item active">
+              <h3 class="ui-border-b">
+                <p>最近在玩的好友</p><span class="ui-txt-info">11</span>
+              </h3>
+              <ul class="ui-list ui-border-b">
+                <li>
+                  <div class="ui-avatar-s">
+                    <span style="background-image:url(../img/ava1.png)"></span>
+                  </div>
+                  <div class="ui-list-info ui-border-t"><h4>飞翔的企鹅</h4></div>
+                </li>
+                <li>
+                  <div class="ui-avatar-s">
+                    <span style="background-image:url(../img/ava1.png)"></span>
+                  </div>
+                  <div class="ui-list-info ui-border-t"><h4>飞翔的企鹅</h4></div>
+                </li>
+                <li>
+                  <div class="ui-avatar-s">
+                    <span style="background-image:url(../img/ava1.png)"></span>
+                  </div>
+                  <div class="ui-list-info ui-border-t"><h4>飞翔的企鹅</h4></div>
+                </li>
+              </ul>
+            </li>
+            <li class=" ui-selector-item">
+              <h3 class="ui-border-b">
+                <p>最近在玩的好友</p><span class="ui-txt-info">11</span>
+              </h3>
+              <ul class="ui-list ui-border-b">
+                <li>
+                  <div class="ui-avatar-s">
+                    <span style="background-image:url(../img/ava1.png)"></span>
+                  </div>
+                  <div class="ui-list-info ui-border-t"><h4>飞翔的企鹅</h4></div>
+                </li>
+                <li>
+                  <div class="ui-avatar-s">
+                    <span style="background-image:url(../img/ava1.png)"></span>
+                  </div>
+                  <div class="ui-list-info ui-border-t"><h4>飞翔的企鹅</h4></div>
+                </li>
+              </ul>
+            </li>
+            <li class=" ui-selector-item">
+              <h3 class="ui-border-b"><i class="arrow"></i>
+                <p>最近在玩的好友</p><span class="ui-txt-info">11</span>
+              </h3>
+              <ul class="ui-list ui-border-b">
+                <li>
+                  <div class="ui-avatar-s">
+                    <span style="background-image:url(../img/ava1.png)"></span>
+                  </div>
+                  <div class="ui-list-info ui-border-t"><h4>飞翔的企鹅</h4></div>
+                </li>
+                <li>
+                  <div class="ui-avatar-s">
+                    <span style="background-image:url(../img/ava1.png)"></span>
+                  </div>
+                  <div class="ui-list-info ui-border-t"><h4>飞翔的企鹅</h4></div>
+                </li>
+                <li>
+                  <div class="ui-avatar-s">
+                    <span style="background-image:url(../img/ava1.png)"></span>
+                  </div>
+                  <div class="ui-list-info ui-border-t"><h4>飞翔的企鹅</h4></div>
+                </li>
+                <li>
+                  <div class="ui-avatar-s">
+                    <span style="background-image:url(../img/ava1.png)"></span>
+                  </div>
+                  <div class="ui-list-info ui-border-t"><h4>飞翔的企鹅</h4></div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+
+
+        
+
+
+
+
+<section id="progress">
+    <div class="demo-item">
+        <p class="demo-desc">进度条</p>
+        <div class="demo-block">
+            <div class="ui-progress">
+                <span style="width:50%"></span>
+            </div>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">图片上进度条</p>
+        <div class="demo-block">
+            <ul class="ui-grid-halve">
+                <li>
+                    <div class="ui-grid-halve-img">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/290x160)"></span>
+                        <div class="ui-progress">
+                            <span style="width:50%"></span>
+                        </div>
+                    </div>
+
+                </li>
+                <li>
+                    <div class="ui-grid-halve-img">
+                        <span style="background-image:url(http://placeholder.qiniudn.com/290x160)"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+        
+
+
+
+
+<section id="loading">
+    <div class="demo-item">
+        <p class="demo-desc">局部加载中</p>
+        <div class="demo-block">
+            <div class="ui-loading-wrap">
+                <p>正在加载中...</p>
+                <i class="ui-loading"></i>
+            </div>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">页面加载中</p>
+        <div class="demo-block">
+            <div class="ui-loading-block">
+                <div class="ui-loading-cnt">
+                  <i class="ui-loading-bright"></i>
+                  <p>正在加载中...</p>
+               </div>
+            </div>
+            <script type="text/javascript" class="demo-script">
+                var el=$.loading({
+                    content:'加载中...',
+                })
+                el.on("loading:hide",function(){
+                    console.log("loading hide");
+                });
+            </script>
+        </div>
+            
+            
+    </div>
+
+</section>
+
+
+        
+
+
+
+
+<section id="actionsheet">
+	<div class="demo-item">
+		<p class="demo-desc">菜单</p>
+		<div class="demo-block">
+			<div class="ui-actionsheet">  
+				<div class="ui-actionsheet-cnt">
+					<h4>同时会将我从对方的列表中删除</h4> 
+					<button>分享</button>  
+					<button class="ui-actionsheet-del">删除</button>
+					<button>取消</button> 
+				</div>         
+			</div>
+			<script type="text/javascript">
+				$('.ui-actionsheet').addClass('show');
+			</script>
+		</div>
+	</div>
+</section>
+
+
+        
+
+
+
+
+<section id="dialog">
+	<div class="demo-item">
+		<p class="demo-desc">对话框</p>
+		<div class="demo-block">
+			<div class="ui-dialog">
+			    <div class="ui-dialog-cnt">
+				    <header class="ui-dialog-hd ui-border-b">
+	                    <h3>新手任务</h3>
+	                    <i class="ui-dialog-close" data-role="button"></i>
+	                </header>
+			        <div class="ui-dialog-bd">
+			            <h4>标题标题</h4>
+			            <div>开通年费QQ会员即可领取欢乐斗地主感恩节回馈礼包！</div>
+			        </div>
+			        <div class="ui-dialog-ft ui-btn-group">
+			            <button type="button" data-role="button">取消</button>
+			            <button type="button" data-role="button">开通</button>
+			        </div>
+			    </div>        
+			</div>
+			<script class="demo-script">
+			$(".ui-dialog").dialog("show");
+			</script>
+			
+		</div>
+		<div class="ui-btn" id="btn1">模板创建弹窗</div>
+    	<div class="ui-btn" id="btn2">DOM创建弹窗</div>
+    	<script class="demo-script">
+		(function (){
+            $("#btn1").click(function(){
+			    var dia=$.dialog({
+			        title:'温馨提示',
+			        content:'温馨提示内容',
+			        button:["确认","取消"]
+			    });
+
+			    dia.on("dialog:action",function(e){
+			        console.log(e.index)
+			    });
+			    dia.on("dialog:hide",function(e){
+			        console.log("dialog hide")
+			    });
+			})
+			$("#btn2").click(function(){
+			    $(".ui-dialog").dialog("show");
+			})
+		})();
+        </script>
+	</div>
+</section>
+
+
+        
+
+
+
+
+<section id="tab">
+	<div class="demo-item">
+		<p class="demo-desc">标签栏</p>
+		<div class="demo-block">
+			<div class="ui-tab">
+			    <ul class="ui-tab-nav ui-border-b">
+			        <li class="current">热门推荐</li>
+			        <li>全部表情</li>
+			        <li>表情</li>
+			    </ul>
+			    <ul class="ui-tab-content" style="width:300%">
+			        <li>内容1</li>
+			        <li>内容2</li>
+			        <li>内容3</li>
+			    </ul>
+			</div>
+		</div>
+		<script class="demo-script">
+		(function (){
+            var tab = new fz.Scroll('.ui-tab', {
+		        role: 'tab',
+		        autoplay: true,
+		        interval: 3000
+		    });
+		    /* 滑动开始前 */
+		    tab.on('beforeScrollStart', function(fromIndex, toIndex) {
+		        console.log(fromIndex,toIndex);// from 为当前页，to 为下一页
+		    })
+		})();
+        </script>
+	</div>
+</section>
+
+        
+
+
+
+
+<section id="slider">
+    <div class="demo-item">
+        <p class="demo-desc">轮播组件</p>
+        <div class="demo-block">
+            <div class="ui-slider">
+                <ul class="ui-slider-content" style="width: 300%">
+                    <li><span style="background-image:url(http://placeholder.qiniudn.com/640x200)"></span></li>
+                    <li><span style="background-image:url(http://placeholder.qiniudn.com/640x200)"></span></li>
+                    <li><span style="background-image:url(http://placeholder.qiniudn.com/640x200)"></span></li>
+                </ul>
+            </div>
+            内容
+
+            
+        </div>
+        <script class="demo-script">
+        (function (){
+            var slider = new fz.Scroll('.ui-slider', {
+                role: 'slider',
+                indicator: true,
+                autoplay: true,
+                interval: 3000
+            });
+
+            slider.on('beforeScrollStart', function(fromIndex, toIndex) {
+                console.log(fromIndex,toIndex)
+            });
+
+            slider.on('scrollEnd', function() {
+                console.log('end')
+            });
+        })();
+        </script>
+    </div>
+</section>
+
+
+        
+
+
+
+
+<link rel="stylesheet" href="../css/global.css">
+<section id="vip">
+    <div class="demo-item">
+        <p class="demo-desc">会员栏</p>
+        <div class="demo-block">
+            <div class="ui-tooltips-vip">
+                <div class="ui-tooltips-cnt">
+                    <i class="ui-icon-vip"></i>
+                    <span>QQ会员xxxx</span>
+                    <button class="ui-btn-vip">开通</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">qq等级图标</p>
+        <div class="demo-block">
+            <span class="ui-icon-qqlevel ui-icon-qqlevel-none"></span>
+            <span class="ui-icon-qqlevel ui-icon-qqlevel-king"></span>
+            <span class="ui-icon-qqlevel ui-icon-qqlevel-sun"></span>
+            <span class="ui-icon-qqlevel ui-icon-qqlevel-moon"></span>
+            <span class="ui-icon-qqlevel ui-icon-qqlevel-star"></span>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">鹅头图标</p>
+        <div class="demo-block">
+            <span class="ui-icon-qq"></span>
+            <span class="ui-icon-vip"></span>
+            <span class="ui-icon-svip"></span>
+            <span class="ui-icon-yearvip"></span>
+            <span class="ui-icon-yearsvip"></span>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">会员等级图标</p>
+        <div class="demo-block">
+            测试
+            <span class="ui-icon-viplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/vip.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/vip1.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/vip2.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/vip3.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/vip4.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/vip5.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/vip6.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/vip7.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/vip7.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/vip8.png)"></span>
+            </span>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">会员等级图标铭牌</p>
+        <div class="demo-block">
+                        测试
+            <span class="ui-icon-viplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/vip_s.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/vip_s1.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/vip_s2.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/vip_s3.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/vip_s4.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/vip_s5.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/vip_s6.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/vip_s7.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/vip_s8.png)"></span>
+            </span>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">会员等级图标</p>
+        <div class="demo-block">
+                        测试
+            <span class="ui-icon-yearviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearvip1.png)"></span>
+            </span>
+            <span class="ui-icon-yearviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearvip2.png)"></span>
+            </span>
+            <span class="ui-icon-yearviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearvip3.png)"></span>
+            </span>
+            <span class="ui-icon-yearviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearvip4.png)"></span>
+            </span>
+            <span class="ui-icon-yearviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearvip5.png)"></span>
+            </span>
+            <span class="ui-icon-yearviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearvip6.png)"></span>
+            </span>
+            <span class="ui-icon-yearviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearvip7.png)"></span>
+            </span>
+            <span class="ui-icon-yearviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearvip8.png)"></span>
+            </span>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">会员等级图标</p>
+        <div class="demo-block">
+                        测试
+            <span class="ui-icon-yearviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearvip_s1.png)"></span>
+            </span>
+            <span class="ui-icon-yearviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearvip_s2.png)"></span>
+            </span>
+            <span class="ui-icon-yearviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearvip_s3.png)"></span>
+            </span>
+            <span class="ui-icon-yearviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearvip_s4.png)"></span>
+            </span>
+            <span class="ui-icon-yearviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearvip_s5.png)"></span>
+            </span>
+            <span class="ui-icon-yearviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearvip_s6.png)"></span>
+            </span>
+            <span class="ui-icon-yearviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearvip_s7.png)"></span>
+            </span>
+            <span class="ui-icon-yearviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearvip_s8.png)"></span>
+            </span>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">会员等级图标</p>
+        <div class="demo-block">
+                        测试
+            <span class="ui-icon-sviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/svip.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/svip1.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/svip2.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/svip3.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/svip4.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/svip5.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/svip6.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/svip7.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/svip8.png)"></span>
+            </span>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">会员等级图标</p>
+        <div class="demo-block">
+                        测试
+            <span class="ui-icon-sviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/svip_s.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/svip_s1.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/svip_s2.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/svip_s3.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/svip_s4.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/svip_s5.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/svip_s6.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/svip_s7.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/svip_s8.png)"></span>
+            </span>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">会员等级图标</p>
+        <div class="demo-block">
+                        测试
+            <span class="ui-icon-yearsviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearsvip1.png)"></span>
+            </span>
+            <span class="ui-icon-yearsviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearsvip2.png)"></span>
+            </span>
+            <span class="ui-icon-yearsviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearsvip3.png)"></span>
+            </span>
+            <span class="ui-icon-yearsviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearsvip4.png)"></span>
+            </span>
+            <span class="ui-icon-yearsviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearsvip5.png)"></span>
+            </span>
+            <span class="ui-icon-yearsviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearsvip6.png)"></span>
+            </span>
+            <span class="ui-icon-yearsviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearsvip7.png)"></span>
+            </span>
+            <span class="ui-icon-yearsviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearsvip8.png)"></span>
+            </span>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">会员等级图标</p>
+        <div class="demo-block">
+                        测试
+            <span class="ui-icon-yearsviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearsvip_s1.png)"></span>
+            </span>
+            <span class="ui-icon-yearsviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearsvip_s2.png)"></span>
+            </span>
+            <span class="ui-icon-yearsviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearsvip_s3.png)"></span>
+            </span>
+            <span class="ui-icon-yearsviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearsvip_s4.png)"></span>
+            </span>
+            <span class="ui-icon-yearsviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearsvip_s5.png)"></span>
+            </span>
+            <span class="ui-icon-yearsviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearsvip_s6.png)"></span>
+            </span>
+            <span class="ui-icon-yearsviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearsvip_s7.png)"></span>
+            </span>
+            <span class="ui-icon-yearsviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/yearsvip_s8.png)"></span>
+            </span>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">会员等级图标</p>
+        <div class="demo-block">
+                        测试
+            <span class="ui-icon-mq">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/mq_vip.png)"></span>
+            </span>
+            <span class="ui-icon-mq">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/mq_yearvip.png)"></span>
+            </span>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">会员等级图标</p>
+        <div class="demo-block">
+                        测试
+            <span class="ui-icon-viplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/vip.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/vip1.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/vip2.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/vip3.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/vip4.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/vip5.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/vip6.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/vip7.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/vip8.png)"></span>
+            </span>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">会员等级图标</p>
+        <div class="demo-block">
+                        测试
+            <span class="ui-icon-viplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/vip_s.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/vip_s1.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/vip_s2.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/vip_s3.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/vip_s4.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/vip_s5.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/vip_s6.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/vip_s7.png)"></span>
+            </span>
+            <span class="ui-icon-viplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/vip_s8.png)"></span>
+            </span>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">会员等级图标</p>
+        <div class="demo-block">
+                        测试
+            <span class="ui-icon-yearviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearvip1.png)"></span>
+            </span>
+            <span class="ui-icon-yearviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearvip2.png)"></span>
+            </span>
+            <span class="ui-icon-yearviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearvip3.png)"></span>
+            </span>
+            <span class="ui-icon-yearviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearvip4.png)"></span>
+            </span>
+            <span class="ui-icon-yearviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearvip5.png)"></span>
+            </span>
+            <span class="ui-icon-yearviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearvip6.png)"></span>
+            </span>
+            <span class="ui-icon-yearviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearvip7.png)"></span>
+            </span>
+            <span class="ui-icon-yearviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearvip8.png)"></span>
+            </span>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">会员等级图标</p>
+        <div class="demo-block">
+                        测试
+            <span class="ui-icon-yearviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearvip_s1.png)"></span>
+            </span>
+            <span class="ui-icon-yearviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearvip_s2.png)"></span>
+            </span>
+            <span class="ui-icon-yearviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearvip_s3.png)"></span>
+            </span>
+            <span class="ui-icon-yearviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearvip_s4.png)"></span>
+            </span>
+            <span class="ui-icon-yearviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearvip_s5.png)"></span>
+            </span>
+            <span class="ui-icon-yearviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearvip_s6.png)"></span>
+            </span>
+            <span class="ui-icon-yearviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearvip_s7.png)"></span>
+            </span>
+            <span class="ui-icon-yearviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearvip_s8.png)"></span>
+            </span>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">会员等级图标</p>
+        <div class="demo-block">
+                        测试
+            <span class="ui-icon-sviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/svip.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/svip1.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/svip2.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/svip3.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/svip4.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/svip5.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/svip6.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/svip7.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/svip8.png)"></span>
+            </span>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">会员等级图标</p>
+        <div class="demo-block">
+                        测试
+            <span class="ui-icon-viplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/svip_s.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/svip_s1.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/svip_s2.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/svip_s3.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/svip_s4.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/svip_s5.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/svip_s6.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/svip_s7.png)"></span>
+            </span>
+            <span class="ui-icon-sviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/svip_s8.png)"></span>
+            </span>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">会员等级图标</p>
+        <div class="demo-block">
+                        测试
+            <span class="ui-icon-yearsviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearsvip1.png)"></span>
+            </span>
+            <span class="ui-icon-yearsviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearsvip2.png)"></span>
+            </span>
+            <span class="ui-icon-yearsviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearsvip3.png)"></span>
+            </span>
+            <span class="ui-icon-yearsviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearsvip4.png)"></span>
+            </span>
+            <span class="ui-icon-yearsviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearsvip5.png)"></span>
+            </span>
+            <span class="ui-icon-yearsviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearsvip6.png)"></span>
+            </span>
+            <span class="ui-icon-yearsviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearsvip7.png)"></span>
+            </span>
+            <span class="ui-icon-yearsviplevel">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearsvip8.png)"></span>
+            </span>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">会员等级图标</p>
+        <div class="demo-block">
+                        测试
+            <span class="ui-icon-yearsviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearsvip_s1.png)"></span>
+            </span>
+            <span class="ui-icon-yearsviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearsvip_s2.png)"></span>
+            </span>
+            <span class="ui-icon-yearsviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearsvip_s3.png)"></span>
+            </span>
+            <span class="ui-icon-yearsviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearsvip_s4.png)"></span>
+            </span>
+            <span class="ui-icon-yearsviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearsvip_s5.png)"></span>
+            </span>
+            <span class="ui-icon-yearsviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearsvip_s6.png)"></span>
+            </span>
+            <span class="ui-icon-yearsviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearsvip_s7.png)"></span>
+            </span>
+            <span class="ui-icon-yearsviplevel-s">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/yearsvip_s8.png)"></span>
+            </span>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">会员等级图标</p>
+        <div class="demo-block">
+                        测试
+            <span class="ui-icon-mq">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/mq_vip.png)"></span>
+            </span>
+            <span class="ui-icon-mq">
+                <span style="background-image: url(http://i.gtimg.cn/vipstyle/frozenui/1.0.0/img/level/off/mq_yearvip.png)"></span>
+            </span>
+        </div>
+    </div>
+    
+</section>
+
+
+        
+        </section><!-- /.ui-container-->
+        <script>
+        $('ul li').click(function(){
+            location.href= $(this).data('href');
+        });
+        $('.ui-header .ui-btn').click(function(){
+            location.href= 'index.html';
+        });
+        </script>
+    </body>
+</html>
