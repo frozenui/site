@@ -20,10 +20,10 @@ module.exports = function(grunt){
         },
 
         copy: {
-            // 复制 frozenui/dist 到 public/frozenui/
+            // 复制 frozenui/_dist 到 public/frozenui/
             frozen: {
                 expand: true,
-                cwd: '../frozenui/dist/',
+                cwd: '../frozenui/_dist/',
                 src: '**',
                 dest: publicDir + '/frozenui/'
             },
