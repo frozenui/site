@@ -58,7 +58,7 @@ page.components = {
     isDemoPage: true,
     files: [
         {title: '面板',       html: 'panel',          css: 'panel'},
-        {title: '按钮',       html: 'btn',            css: ['btn', 'btn-group']},
+        {title: '按钮',       html: 'btn',            css: ['btn', 'btn-group','btn-progress']},
         {title: '头像',       html: 'avatar',         css: 'avatar'},
         {title: '红点',       html: 'reddot',         css: 'reddot'},
         {title: '徽标',       html: 'badge',          css: 'badge'},
