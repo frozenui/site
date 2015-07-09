@@ -37,6 +37,7 @@ page.base = {
     isDemoPage: true,
     files: [
         {title: 'reset',      css: 'reset'},
+        {title: 'rem方案',     css: 'rem'},
         {title: '文本',        html: 'type',       css: 'type'},
         {title: '布局',        html: 'layout',     css: 'layout'},
         {title: '网格',        html: 'grid',       css: 'grid'},
