@@ -1,26 +1,36 @@
 
 
-<div class="frozen-modules">
-    <% for(var i = 0; i < demos.length; i++ ) { %>
-    <div id="<%= demos[i].name %>" class="frozen-module">
+
+<% for(var i = 0; i < demos.length; i++ ) { %>
+
+<div class="module-group" id="<%= demos[i].name %>">
+    <div class="group-head">
+        <h1 class="group-title"> <a href="http://frozenui.github.io/frozenui/demo/<%= demos[i].name %>.html"><%= demos[i].title %> <%= demos[i].name %></a></h1>
+    </div>
+
+    <% for(var j = 0; j < demos[i].items.length; j++ ) { %>
+    <div class="frozen-module">
         <div class="frozen-module-head">
-            <h2 class="frozen-module-title">
-                <a href="http://frozenui.github.io/frozenui/demo/<%= demos[i].name %>.html"><%= demos[i].title %> <%= demos[i].name %>.css</a>
-                <!--<a class="doc-demo-css-link" href="http://frozenui.github.io/frozenui/css/<%= demos[i].name %>.css" title="点击查看源码" target="_blank"><%= demos[i].name %>.css</a>-->
-                <a class="doc-demo-link" href="http://frozenui.github.io/frozenui/demo/<%= demos[i].name %>.html" title="点击查看demo" target="_blank"><span>qrcode</span></a>
-                <div class="doc-qrcode"></div>
-            </h2>
+          <h2 class="frozen-module-title">
+            <a href="ui-btn" id="modules-ui-btn"><%= demos[i].items[j].desc %></a>
+            <a class="doc-demo-link" href="http://frozenui.github.io/frozenui/demo/<%= demos[i].name %>.html" title="点击查看demo" target="_blank"><span class="icon-qr"></span></a>
+            <div class="doc-qrcode">
+              <img src="img/qr-code-demo.png" alt="">
+            </div>
+          </h2>
+          <p class="introduce"></p>
         </div>
-        <% for(var j = 0; j < demos[i].items.length; j++ ) { %>
         <div class="frozen-module-demo">
-            <h3 class="frozen-module-subtitle">
-                <%= demos[i].items[j].desc %>
-            </h3>
-            <div class="frozen-module-dom"><%- demos[i].items[j].html %></div>
-            <pre class="frozen-module-code"><code class="html"><%= demos[i].items[j].block %></code></pre>
-            <a class="doc-copy-code-btn" data-clipboard-text="<%= demos[i].items[j].block %>">复制</a>
+          <div class="module-tags">
+            <span class="example module-tags">Example</span>
+            <a class="copy doc-copy-code-btn" data-clipboard-text="<%= demos[i].items[j].block %>">Copy</a>
+          </div>
+          <div class="frozen-module-dom"><div class="dom-content"><%- demos[i].items[j].html %></div></div>
+          <pre class="frozen-module-code"><code class="html"><%= demos[i].items[j].block %></code></pre>
         </div>
-        <% } %>
     </div>
     <% } %>
 </div>
+<% } %>
+
+

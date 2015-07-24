@@ -24,20 +24,44 @@ var page = {};
 page.index = {
     title: '主页',
     desc: 'balabalabalaba...',
-    isDemoPage: false
+    isDemoPage: false,
+    isDemoDoc: false,
+    isIndex: true,
+    userList: [
+        {logoClass: "user-logo", userName: "QQ会员0"},
+        {logoClass: "user-logo", userName: "QQ会员1"},
+        {logoClass: "user-logo", userName: "QQ会员2"},
+        {logoClass: "user-logo", userName: "QQ会员3"},
+        {logoClass: "user-logo", userName: "QQ会员4"},
+        {logoClass: "user-logo", userName: "QQ会员5"},
+        {logoClass: "user-logo", userName: "QQ会员6"},
+        {logoClass: "user-logo", userName: "QQ会员7"},
+        {logoClass: "user-logo", userName: "QQ会员8"},
+        {logoClass: "user-logo", userName: "QQ会员9"}
+    ]
 };
 
 // http://website.com/start 开速开始页
-
+page.start = {
+    title: '快速开始',
+    desc: '简单易用，轻量快捷，为移动端服务的前端框架',
+    isDemoPage: true,
+    isDemoDoc: true,
+    isIndex: false,
+    files: [
+        {title: 'demo',        html: 'demo'},
+    ]
+},
 
 // http://website.com/base 基础样式页
 page.base = {
     title: '基础样式',
-    desc: '哇啦啦啦啦我是基础样式的自我介绍',
+    desc: '简单易用，轻量快捷，为移动端服务的前端框架',
     isDemoPage: true,
+    isDemoDoc: false,
+    isIndex: false,
     files: [
         {title: 'reset',      css: 'reset'},
-        {title: 'rem方案',     css: 'rem'},
         {title: '文本',        html: 'type',       css: 'type'},
         {title: '布局',        html: 'layout',     css: 'layout'},
         {title: '网格',        html: 'grid',       css: 'grid'},
@@ -55,11 +79,14 @@ page.base = {
 // http://website.com/components UI 组件页
 page.components = {
     title: 'UI 组件',
-    desc: '呼啦啦啦啦我是 UI 组件的自我描述',
+    desc: '简单易用，轻量快捷，为移动端服务的前端框架',
     isDemoPage: true,
+    isDemoDoc: false,
+    isIndex: false,
     files: [
+        {title: '按钮',       html: 'btn',            css: ['btn', 'btn-group']},
         {title: '面板',       html: 'panel',          css: 'panel'},
-        {title: '按钮',       html: 'btn',            css: ['btn', 'btn-group','btn-progress']},
+        
         {title: '头像',       html: 'avatar',         css: 'avatar'},
         {title: '红点',       html: 'reddot',         css: 'reddot'},
         {title: '徽标',       html: 'badge',          css: 'badge'},
@@ -88,6 +115,8 @@ page.zepto = {
     title: 'Zepto',
     desc: '提供zepto自定义打包',
     isDemoPage: false,
+    isDemoDoc: false,
+    isIndex: false,
     files: [
         {title: 'zepto',            zepto: 'zepto'},
         {title: 'event',            zepto: 'event'},
@@ -113,6 +142,8 @@ page.plugins = {
     title: 'JS 插件',
     desc: '提供基础的 JS 插件（JS 插件体验请用移动端扫描二维码体验）',
     isDemoPage: false,
+    isDemoDoc: false,
+    isIndex: false,
     files: [
         {title: 'core',           js: 'core'},
         {title: '加载中',          html: 'loading',        js: 'loading'},
@@ -136,6 +167,8 @@ page.case = {
     title: '动画效果集',
     desc: 'css3和硬件传感器动画效果集合。',
     isDemoPage: false,
+    isDemoDoc: false,
+    isIndex: false,
     cases: {
         "csscase": [
             {
@@ -280,7 +313,8 @@ page.customize = {
     title: '定制化下载',
     desc: '勾选你想要的组件, 一键打包...',
     isDemoPage: false,
-
+    isDemoDoc: false,
+    isIndex: false,
     files: {
         base: page.base,
         components: page.components,

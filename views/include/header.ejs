@@ -10,15 +10,26 @@
     <meta name="author" content="Tencent.com"/>
     <link type="image/x-icon" href="http://frozenui.github.io/static/favicon.ico" rel="icon">
     <script type="text/javascript" src="http://tajs.qq.com/stats?sId=37342703" charset="UTF-8"></script>
-    <script src="frozenui/lib/zeptojs/zepto.min.js"></script>
-    <scripe src="frozenui/js/frozen.js"></scripe>
-    <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/solarized.css"/>
+    <script src="http://frozenui.github.io/frozenui/lib/zepto.min.js"></script>
+    <!-- <scripe src="frozenui/js/frozen.js"></scripe> -->
+    <link rel="stylesheet" href="css/base.css">
+    
+    
+
+    <script>
+        if (document.documentElement.clientWidth < 640) {
+            window.location.href = "/frozenui/demo";
+        }
+    </script>
 </head>
 <body>
 <div id="body-wrapper">
+    <% if(isIndex){ %>
     <div class="head-area">
-        <div class="head-content">
+    <% } else { %>
+    <div class="head-area normal">
+    <% } %>
+        <div class="head-content ">
             <div class="title-area"><h1><a href="/">Frozen UI</a></h1></div>
             <div class="nav-area"><a class="nav-toggle"></a>
                 <ol class="main-nav">

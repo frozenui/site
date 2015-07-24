@@ -32,6 +32,12 @@ module.exports = function(grunt){
                 cwd: '../frozenui/demo/',
                 src: ['*.css','*.html'],
                 dest: publicDir + '/frozenui/demo/'
+            },
+            files: {
+                expand: true,
+                src: ['img/**/*','js/**/*','libs/**/*','css/**/*'],
+                dest: publicDir 
+
             }
         },
 
@@ -79,11 +85,12 @@ module.exports = function(grunt){
 
         watch: {
             ejs: {
-                files: ['views/**/*.ejs']
+                files: ['views/**/*.ejs','css/**/*.css'],
+                tasks: ['copy','generateStaticHtmls']
             },
             js: {
                 files: ['bin/www', 'app.js', 'config.js', 'Gruntfile.js', publicDir + '/js/*.js', 'routes/*.js', 'util/*.js'],
-                tasks: ['newer:jshint']
+                //tasks: ['newer:jshint']
             },
             scss: {
                 files: [publicDir + '/css/*.scss'],
@@ -91,6 +98,12 @@ module.exports = function(grunt){
             },
             css: {
                 files: [publicDir + '/css/*.css']
+            },
+            livereload:{ 
+                options:{  
+                    livereload: true  
+                },  
+                files:[ publicDir + '/css/**/*.css', publicDir +'/js/**/*.js', publicDir + '/**/*.html']  
             }
         },
 
@@ -104,9 +117,19 @@ module.exports = function(grunt){
             }
         },
 
-        open : {
-            dev : {
-                path: 'http://127.0.0.1:3000/'
+        connect: {
+            options: {
+                port: 9000,
+                hostname: '127.0.0.1',
+                livereload: 35729
+            },
+            server: {
+                options: {
+                    open: true,
+                    base: [
+                        publicDir
+                    ]
+                }
             }
         },
         markdown: {
@@ -132,6 +155,12 @@ module.exports = function(grunt){
             }
           }
     });
+
+    // 启动服务器及监听
+    grunt.registerTask('server', [
+        'connect:server',
+        'watch'
+    ]);
     
     grunt.registerTask('generateDemoCodes','根据 consig.js 生成配置和示例到 data/', function(){
         var fs = require('fs');
@@ -149,15 +178,21 @@ module.exports = function(grunt){
         for (var category in Config.siteConfig.page) {
             
             var isDemoPage = Config.siteConfig.page[category].isDemoPage;
+            var isDemoDoc = Config.siteConfig.page[category].isDemoDoc;
             var files = Config.siteConfig.page[category].files;
 
             if (isDemoPage && files) {
                 var demos = utils.getDemos(Config.demoHtmlPath, files);
+
                 var htmlContent = '';
                 fs.writeFileSync(path.join(Config.siteDataPath, category + '.js'), JSON.stringify(demos));
                 
                 for(var i = 0; i < demos.length; i ++) {
-                    htmlContent += demos[i].html;
+                    if(isDemoDoc){
+                        htmlContent = demos[i].fullhtml;
+                    }else{
+                        htmlContent += demos[i].html;
+                    }
                 }
 
                 fs.writeFileSync(path.join(Config.siteDataPath, category + '.html'), htmlHeader + htmlContent + htmlFooter);
@@ -223,11 +258,10 @@ module.exports = function(grunt){
 
     // 生成 Demo 和配置自动生成文档网站
     grunt.registerTask('site', [
-        'copy:frozen',
-        'copy:demo',
+        'copy',
         'generateDemoCodes',
         'generateStaticHtmls',
-        'markdown'
+        'server'
     ]);
 
     // 生产环境下执行 grunt

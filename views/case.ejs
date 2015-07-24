@@ -1,16 +1,17 @@
-<% include include/header.ejs %>
-<div class="main-area">
-    <div class="side-area">
-        <ul>
-            <li><a href="#css3动效">CSS3动效</a></li>
-            <li><a href="#使用硬件传感器api">使用硬件传感器api</a></li>
-        </ul>
-    </div>
-    <div class="content-area">
-        <h1><%= title %></h1>
 
-        <div class="content">
-            <p><%= desc %></p>
+<% include include/header.ejs %>
+<link rel="stylesheet" href="css/doc.css">
+<div class="main-content">
+
+    <div class="banner">
+        <div class="banner-content">
+            <h1><%= title %></h1>
+            <p class="info"><%= desc %></p>
+        </div>
+    </div>
+    <div class="content"> 
+
+        <div class="content-area">
 
             <h2 id="css3动效">CSS3动效</h2>
 
@@ -59,5 +60,7 @@
             </div>
         </div>
     </div>
+
+   
 </div>
 <% include include/footer.ejs %>

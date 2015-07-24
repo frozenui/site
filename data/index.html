@@ -26,7 +26,67 @@
         <section class="ui-container">
 
 
-
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <title>FrozenUI Demo</title>
+        <link rel="stylesheet" href="../css/frozen.css">
+    </head>
+    <body ontouchstart="">
+        <header class="ui-header ui-header-positive ui-border-b">
+            <i class="ui-icon-return" onclick="history.back()"></i><h1>选项卡 tab</h1><button class="ui-btn">回首页</button>
+        </header>
+        <footer class="ui-footer ui-footer-btn">
+            <ul class="ui-tiled ui-border-t">
+                <li data-href="index.html" class="ui-border-r"><div>基础样式</div></li>
+                <li data-href="ui.html" class="ui-border-r"><div>UI组件</div></li>
+                <li data-href="js.html"><div>JS插件</div></li>
+            </ul>
+        </footer>
+        <section class="ui-container">
+            <section id="tab">
+            	<div class="demo-item">
+            		<p class="demo-desc">标签栏</p>
+            		<div class="demo-block">
+            			<div class="ui-tab">
+            			    <ul class="ui-tab-nav ui-border-b">
+            			        <li class="current">热门推荐</li>
+            			        <li>全部表情</li>
+            			        <li>表情</li>
+            			    </ul>
+            			    <ul class="ui-tab-content" style="width:300%">
+            			        <li>内容1</li>
+            			        <li>内容2</li>
+            			        <li>内容3</li>
+            			    </ul>
+            			</div>
+            		</div>
+            		<script class="demo-script">
+            		
+                    </script>
+            	</div>
+            </section>
+        </section>
+        <script src="../lib/zepto.min.js"></script>
+        <script src="../js/frozen.js"></script>
+        <script>
+        (function (){
+            var tab = new fz.Scroll('.ui-tab', {
+                role: 'tab',
+                autoplay: true,
+                interval: 3000
+            });
+            /* 滑动开始前 */
+            tab.on('beforeScrollStart', function(fromIndex, toIndex) {
+                console.log(fromIndex,toIndex);// from 为当前页，to 为下一页
+            })
+        })();
+        </script>
+    </body>
+</html>
 
 
 
@@ -883,102 +943,6 @@
 
 
 
-<section id="panel">
-    <div class="demo-item">
-        <p class="demo-desc">默认面板</p>
-        <div class="demo-block">
-            <section class="ui-panel">
-                <h2 class="ui-arrowlink">猜你喜欢<span class="ui-panel-subtitle">1328条</span></h2>
-                <ul class="ui-grid-trisect">
-                    <li>
-                        <div class="ui-border">
-                            <div class="ui-grid-trisect-img">
-                                <span style="background-image:url(http://placeholder.qiniudn.com/190x284)"></span>
-                            </div>
-                            <div>
-                                <h4 class="ui-nowrap-multi">长书名长书名长书名长书名长书名长书名长书名</h4>
-                                <h5 class="ui-nowrap">小仙</h5>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="ui-border">
-                            <div class="ui-grid-trisect-img">
-                                <span style="background-image:url(http://placeholder.qiniudn.com/190x284)"></span>
-                            </div>
-                            <div>
-                                <h4 class="ui-nowrap-multi">长书名长书名长书名长书名长书名长书名长书名</h4>
-                                <h5 class="ui-nowrap">小仙</h5>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="ui-border">
-                            <div class="ui-grid-trisect-img">
-                                <span style="background-image:url(http://placeholder.qiniudn.com/190x284)"></span>
-                            </div>
-                            <div>
-                                <h4 class="ui-nowrap-multi">长书名长书名长书名长书名长书名长书名长书名</h4>
-                                <h5 class="ui-nowrap">小仙</h5>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </section>
-        </div>
-    </div>
-    <div class="demo-item">
-        <p class="demo-desc">卡片式面板，背景为白色，ui-panel-simple没有上边距</p>
-        <div class="demo-block">
-            <section class="ui-panel ui-panel-card ui-panel-simple ui-border-t">
-                <h2 class="ui-arrowlink"><span>评论</span><span class="ui-panel-subtitle">1328条</span><span class="ui-panel-title-tips">更多评论</span></h2>
-                <ul class="ui-list ui-list-pure ui-border-tb">
-                    <li class="ui-border-t">
-                        <p><span>1.faycheng </span><span class="date"> 2月12日</span></p>
-                        <h4>这本书太赞了，每次看都有不一样的体会和感悟，超级喜欢！期待大结局。</h4>
-                    </li>
-                    <li class="ui-border-t">
-                        <p><span>2.faycheng </span><span class="date"> 2月12日</span></p>
-                        <h4>标题标题标题标题标题标题题标题标题标题标题标题标题标题标题标题</h4>
-                    </li>
-                    <li class="ui-border-t">
-                        <p><span>3.faycheng </span><span class="date"> 2月12日</span></p>
-                        <h4>标题标题标题标题标题标题题标题标题标题标题标题标题标题标题标题</h4>
-                    </li>
-                </ul>
-            </section>
-        </div>
-    </div>
-    <div class="demo-item">
-        <p class="demo-desc">简单版</p>
-        <div class="demo-block">
-            <section class="ui-panel ui-panel-pure ui-border-t">
-                <h3>历史搜索：</h3>
-                <ul class="ui-list ui-list-pure ui-border-tb">
-                    <li class="ui-border-t">
-                        <h5><span>1.faycheng </span><span class="date"> 2月12日</span></h5>
-                        <h4>这本书太赞了，每次看都有不一样的体会和感悟，超级喜欢！期待大结局。</h4>
-                    </li>
-                    <li class="ui-border-t">
-                        <h5><span>2.faycheng </span><span class="date"> 2月12日</span></h5>
-                        <h4>标题标题标题标题标题标题题标题标题标题标题标题标题标题标题标题</h4>
-                    </li>
-                    <li class="ui-border-t">
-                        <h5><span>3.faycheng </span><span class="date"> 2月12日</span></h5>
-                        <h4>标题标题标题标题标题标题题标题标题标题标题标题标题标题标题标题</h4>
-                    </li>
-                </ul>
-            </section>
-        </div>
-    </div>
-</section>
-
-
-        
-
-
-
-
 <section id="btn">
     <div class="demo-item">
         <p class="demo-desc">普通小按钮</p>
@@ -1150,6 +1114,88 @@
                     同意
                 </button>
             </div>
+        </div>
+    </div>
+</section>
+
+
+        
+
+
+
+
+<section id="panel">
+    <div class="demo-item">
+        <p class="demo-desc">默认面板</p>
+        <div class="demo-block">
+            <section class="ui-panel">
+                <h2 class="ui-arrowlink">猜你喜欢<span class="ui-panel-subtitle">1328条</span></h2>
+                <ul class="ui-grid-trisect">
+                    <li>
+                        <div class="ui-border">
+                            <div class="ui-grid-trisect-img">
+                                <span style="background-image:url(http://placeholder.qiniudn.com/190x284)"></span>
+                            </div>
+                            <div>
+                                <h4 class="ui-nowrap-multi">长书名长书名长书名长书名长书名长书名长书名</h4>
+                                <h5 class="ui-nowrap">小仙</h5>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ui-border">
+                            <div class="ui-grid-trisect-img">
+                                <span style="background-image:url(http://placeholder.qiniudn.com/190x284)"></span>
+                            </div>
+                            <div>
+                                <h4 class="ui-nowrap-multi">长书名长书名长书名长书名长书名长书名长书名</h4>
+                                <h5 class="ui-nowrap">小仙</h5>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ui-border">
+                            <div class="ui-grid-trisect-img">
+                                <span style="background-image:url(http://placeholder.qiniudn.com/190x284)"></span>
+                            </div>
+                            <div>
+                                <h4 class="ui-nowrap-multi">长书名长书名长书名长书名长书名长书名长书名</h4>
+                                <h5 class="ui-nowrap">小仙</h5>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">ui-panel-simple没有下边距</p>
+        <div class="demo-block">
+            <section class="ui-panel ui-panel-simple ui-border-tb">
+                <h2 class="ui-arrowlink"><span>评论</span><span class="ui-panel-subtitle">1328条</span><span class="ui-panel-title-tips">更多评论</span></h2>
+            </section>
+        </div>
+    </div>
+    <div class="demo-item">
+        <p class="demo-desc">简单版，标题字体较小</p>
+        <div class="demo-block">
+            <section class="ui-panel ui-panel-pure ui-border-t">
+                <h3>历史搜索：</h3>
+                <ul class="ui-list ui-list-pure ui-border-tb">
+                    <li class="ui-border-t">
+                        <h5><span>1.faycheng </span><span class="date"> 2月12日</span></h5>
+                        <h4>这本书太赞了，每次看都有不一样的体会和感悟，超级喜欢！期待大结局。</h4>
+                    </li>
+                    <li class="ui-border-t">
+                        <h5><span>2.faycheng </span><span class="date"> 2月12日</span></h5>
+                        <h4>标题标题标题标题标题标题题标题标题标题标题标题标题标题标题标题</h4>
+                    </li>
+                    <li class="ui-border-t">
+                        <h5><span>3.faycheng </span><span class="date"> 2月12日</span></h5>
+                        <h4>标题标题标题标题标题标题题标题标题标题标题标题标题标题标题标题</h4>
+                    </li>
+                </ul>
+            </section>
         </div>
     </div>
 </section>

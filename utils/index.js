@@ -102,7 +102,7 @@ function removeFolderAndZipFile (folderPath, timeout) {
 
 
 /**
- * 返回 JMUI 的代码片段, 从 JMUI/demo/*.html 中抽取
+ * 返回 FrozenUI 的代码片段, 从 FrozenUI/demo/*.html 中抽取
  * @param files, 传入 "base-css"/"ui-css"
  * @returns {Array} 返回代码片段组成的数组
  */
@@ -116,6 +116,7 @@ function getDemos (demoDir, files) {
         var demoHtmlFileContent = fs.readFileSync(demoHtmlFilePath).toString();
         var $ = cheerio.load(demoHtmlFileContent, {decodeEntities: false});
         var html = $('.ui-container').html();
+        var fullhtml = $.html();
         var items = [];
         var itemsLen = $('.demo-item').length;
         for (var j=0;j<itemsLen;j++) {
@@ -136,7 +137,8 @@ function getDemos (demoDir, files) {
             name: name,
             title: title,
             items: items,
-            html: html
+            html: html,
+            fullhtml: fullhtml
         };
         demos.push(demo);
     }

@@ -1,0 +1,24 @@
+<% include include/header.ejs %>
+<link rel="stylesheet" href="frozenui/css/frozen.css"/>
+<link rel="stylesheet" href="frozenui/css/vip.css">
+
+<link rel="stylesheet" href="css/solarized_light.css">
+<link rel="stylesheet" href="css/component.css">
+
+<div class="main-content">
+
+	<div class="banner">
+		<div class="banner-content">
+		    <h1><%= title %></h1>
+            <p class="info"><%= desc %></p>
+		</div>
+	</div>
+
+	<div class="content">
+
+	    <div class="content-area">
+	    	<pre class="frozen-module-code"><code class="html"><%= demos[0].fullhtml %></code></pre>
+	    </div>
+	</div>
+</div>
+<% include include/footer.ejs %>

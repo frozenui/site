@@ -1,52 +1,347 @@
 <% include include/header.ejs%>
+<link rel="stylesheet" href="http://baymaxui.github.io/frozenui/css/global.css">
+<link rel="stylesheet" href="css/component.css">
+<link rel="stylesheet" href="css/solarized.css">
 
-<div class="main-area">
-    <div class="content-area">
-        <h1><%= title %></h1>
-        
-        <div class="content">
-            <br>
-            <h3><%= desc %></h3>
-            <br>
-            
-            <form id="custom-form" method="POST" action="customize">
-                    <button type="submit" class="btn-download">定制完成，立即下载</button>
-                    <% for (var p  in files ) { %>
-                        <h2><%= files[p].title %></h2>
-                        <% for(var i = 0; i < files[p].files.length; i++ ) { %>
-                        <div class="form-item">
-                            <!--<label>-->
-                                <!--<input type="checkbox" data-click="toggle" checked>-->
-                                <%= files[p].files[i].title %> |
-                            <!--</label>-->
-                            <% if (files[p].files[i].css) { %>
-                            <label>
-                                <input type="checkbox" name="css" value="<%= files[p].files[i].css %>" checked>
-                                <%= files[p].files[i].css %>.css
-                            </label>
-                             <% } %>
-                            <% if (files[p].files[i].js) { %> 
-                            <label>
-                                <input type="checkbox" name="js" value="<%= files[p].files[i].js %>" checked>
-                                <%= files[p].files[i].js %>.js
-                            </label>
-                            <% } %>
-                            <% if (files[p].files[i].zepto) { %> 
-                            <label>
-                                <input type="checkbox" name="zepto" value="<%= files[p].files[i].zepto %>" checked>
-                                <%= files[p].files[i].zepto %>.js
-                            </label>
-                            <% } %>
-                        </div>
-                        <% } %>
-                    <% } %>
-                        
+<div class="main-content">
+    <div class="banner">
+        <div class="banner-content">
+            <h1>定制下载 如此简单</h1>
+            <p class="info">勾选你想要的组件, 一键打包...</p>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content-area full">
+            <form id="custom-form" class="customize" method="POST" action="customize">
+                <button type="submit" class="btn-download">定制完成，立即下载</button>
+                <div class="fast-section">
+                    <p>请勾选你所需要的组件</p>
+                    <button data-check="1" class="toggle" type="button">全选/全部取消</button>
+                </div>
+                <fieldset class="section-css">
+                    <h2>基础样式</h2>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="type" checked="">文本<span>type.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="layout" checked="">布局<span>layout.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="grid" checked="">网格<span>grid.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="placehold" checked="">占位<span>placehold.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="border" checked="">1px解决方案<span>border.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="arrowlink" checked="">箭头链接<span>arrowlink.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="nowrap" checked="">文字截断<span>nowrap.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="whitespace" checked="">两端留白<span>whitespace.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="justify" checked="">两端对齐<span>justify.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="icon" checked="">基本图标<span>icon.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="icon-full" checked="">所有图标<span>icon-full.css</span>
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset class="section-ui">
+                    <h2>UI 组件</h2>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="panel" checked="">面板<span>panel.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="btn,btn-group" checked="">按钮<span>btn,btn-group.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="avatar" checked="">头像<span>avatar.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="reddot" checked="">红点<span>reddot.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="badge" checked="">徽标<span>badge.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="label" checked="">标签<span>label.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="tag" checked="">角标<span>tag.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="searchbar" checked="">搜索框<span>searchbar.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="list" checked="">列表<span>list.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="form,checkbox,switch,radio,select,input" checked="">表单<span>form,checkbox,switch,radio,select,input.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="table" checked="">表格<span>table.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="notice" checked="">通知<span>notice.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="tips" checked="">普通提示<span>tips.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="tooltips" checked="">工具提示<span>tooltips.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="newstips" checked="">新消息提示<span>newstips.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="poptips" checked="">浮层提示<span>poptips.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="selector" checked="">选择器<span>selector.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="progress" checked="">进度条<span>progress.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="loading" checked="">加载中<span>loading.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="actionsheet" checked="">菜单<span>actionsheet.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="dialog" checked="">对话框<span>dialog.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="tab" checked="">选项卡<span>tab.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="slider" checked="">轮播图<span>slider.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="vip" checked="">vip<span>vip.css</span>
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset class="section-zepto">
+                    <h2>Zepto</h2>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="zepto" value="zepto" checked="">zepto<span>zepto.js</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="zepto" value="event" checked="">event<span>event.js</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="zepto" value="touch" checked="">touch<span>touch.js</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="zepto" value="ajax" checked="">ajax<span>ajax.js</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="zepto" value="form" checked="">form<span>form.js</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="zepto" value="detect" checked="">detect<span>detect.js</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="zepto" value="fx" checked="">fx<span>fx.js</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="zepto" value="fx_methods" checked="">fx_methods<span>fx_methods.js</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="zepto" value="data" checked="">data<span>data.js</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="zepto" value="deferred" checked="">deferred<span>deferred.js</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="zepto" value="data" checked="">data<span>data.js</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="zepto" value="callbacks" checked="">callbacks<span>callbacks.js</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="zepto" value="selector" checked="">selector<span>selector.js</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="zepto" value="gesture" checked="">gesture<span>gesture.js</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="zepto" value="stack" checked="">stack<span>stack.js</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="zepto" value="assets" checked="">assets<span>assets.js</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="zepto" value="ios3" checked="">ios3<span>ios3.js</span>
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset class="section-js">
+                    <h2>JS 插件</h2>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="js" value="core" checked="">core<span>core.js</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="js" value="loading" checked="">加载中<span>loading.js</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="js" value="tips" checked="">提示<span>tips.js</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="js" value="dialog" checked="">对话框<span>dialog.js</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="js" value="scroll" checked="">选项卡，轮播图，模拟滑动<span>scroll.js</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="css" value="parallax,parallax-animation" checked="">视差滚动 css<span>parallax,parallax-animation.css</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="js" value="parallax" checked="">视差滚动 js<span>parallax.js</span>
+                        </label>
+                    </div>
+                    <div class="form-item">
+                        <label>
+                            <input type="checkbox" name="js" value="cover" checked="">cover效果<span>cover.js</span>
+                        </label>
+                    </div>
+                </fieldset>
+                <button type="submit" class="btn-download">定制完成，立即下载</button>
             </form>
         </div>
     </div>
 </div>
+</div>
 
 <% include include/footer.ejs%>
+
+<script src="libs/bluebird/bluebird.min.js"></script>
+<script src="libs/jszip/dist/jszip.min.js"></script>
+<script src="libs/filesaver/FileSaver.min.js"></script>
 <script src="js/customize.js"></script>
 
 

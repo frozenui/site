@@ -1,21 +1,27 @@
 <% include include/header.ejs %>
 <link rel="stylesheet" href="frozenui/css/frozen.css"/>
-<link rel="stylesheet" href="frozenui/css/vip.css"/>
-<link rel="stylesheet" href="css/doc.css"/>
-<div class="main-area">
-    <div class="side-area">
-        <% include include/nav-list.ejs %>
-    </div>
+<link rel="stylesheet" href="frozenui/css/vip.css">
 
-    <div class="content-area">
-        <h1><%=  title %></h1>
+<link rel="stylesheet" href="css/solarized_light.css">
+<link rel="stylesheet" href="css/component.css">
 
-        <div class="content">
-            
+<div class="main-content">
 
-            <% include include/demo-list.ejs %>
+	<div class="banner">
+		<div class="banner-content">
+		    <h1><%= title %></h1>
+            <p class="info"><%= desc %></p>
+		</div>
+	</div>
 
-        </div>
-    </div>
+	<div class="content">	
+	    <div class="side-area">
+	        <% include include/nav-list.ejs %>
+	    </div>
+
+	    <div class="content-area">
+	            <% include include/demo-list.ejs %>
+	    </div>
+	</div>
 </div>
 <% include include/footer.ejs %>
