@@ -5,18 +5,21 @@
 
 <div class="module-group" id="<%= demos[i].name %>">
     <div class="group-head">
-        <h1 class="group-title"> <a href="http://frozenui.github.io/frozenui/demo/<%= demos[i].name %>.html"><%= demos[i].title %> <%= demos[i].name %></a></h1>
+        <h1 class="group-title"> 
+          <a href="http://frozenui.github.io/frozenui/demo/<%= demos[i].name %>.html"><%= demos[i].title %> <%= demos[i].name %></a>
+          <a class="doc-demo-link" href="http://frozenui.github.io/frozenui/demo/<%= demos[i].name %>.html" title="点击查看demo" target="_blank"><span class="icon-qr"></span></a>
+          <div class="doc-qrcode">
+            <img src="img/qr-code-demo.png" alt="">
+          </div>
+        </h1>
     </div>
 
     <% for(var j = 0; j < demos[i].items.length; j++ ) { %>
     <div class="frozen-module">
         <div class="frozen-module-head">
           <h2 class="frozen-module-title">
-            <a href="ui-btn" id="modules-ui-btn"><%= demos[i].items[j].desc %></a>
-            <a class="doc-demo-link" href="http://frozenui.github.io/frozenui/demo/<%= demos[i].name %>.html" title="点击查看demo" target="_blank"><span class="icon-qr"></span></a>
-            <div class="doc-qrcode">
-              <img src="img/qr-code-demo.png" alt="">
-            </div>
+            <%= demos[i].items[j].desc %>
+            
           </h2>
           <p class="introduce"></p>
         </div>
