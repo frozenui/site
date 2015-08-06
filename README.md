@@ -1,7 +1,6 @@
-# BayMaxUI文档
 
-注意：生成文档时，BaymaxSite 需要与 BaymaxUI 处于同级目录。
 
+注意：生成文档时，site 需要与 FrozenUI 处于同级目录。
 
 
 ## 访问文档
@@ -31,7 +30,7 @@ $ grunt open
 
 ### 生成文档
 
-自动生成文档需要保证 BaymaxSite 与 BaymaxUI 处于同级目录。
+自动生成文档需要保证site 与 FrozenUI  处于同级目录。
 
 执行以下命令会基于 config.js 生成文档所需要的数据：
 
@@ -63,7 +62,7 @@ $ grunt site
 
 自动生成文档需要注意以下几点：
 
-1. BaymaxUI/demo/*.html 按约定的 DOM 结构编写
+1. FrozenUI/demo/*.html 按约定的 DOM 结构编写
 2. config.js 配置编写无误
 
 注意：
