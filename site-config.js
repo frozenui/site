@@ -128,7 +128,6 @@ page.zepto = {
         {title: 'fx_methods',       zepto: 'fx_methods'},
         {title: 'data',             zepto: 'data'},
         {title: 'deferred',         zepto: 'deferred'},
-        {title: 'data',             zepto: 'data'},
         {title: 'callbacks',        zepto: 'callbacks'},
         {title: 'selector',         zepto: 'selector'},
         {title: 'gesture',          zepto: 'gesture'},
