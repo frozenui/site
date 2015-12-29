@@ -6,7 +6,7 @@ $(function(){
 
     $.ajax({
         type: "POST",
-        url: "http://wevas.info/frozen_case/index.php/Home/Index/getData",
+        url: "http://61.142.65.166/frozen_case/index.php/Home/Index/getData",
         dataType: 'json'
     })
     .done(function(data) {
@@ -18,7 +18,7 @@ $(function(){
                 cssCaseList.append(
                     '<li>'+
                         '<div class="pic">'+
-                            '<img alt="" src="http://wevas.info/frozen_case/Public/'+data[i].img+'.jpg" width="160">'+
+                            '<img alt="" src="http://61.142.65.166/frozen_case/Public/'+data[i].img+'.jpg" width="160">'+
                         '</div>'+
                         '<div class="cwfqr" data-url="'+data[i].url+'">'+
                             '<a href="'+data[i].url+'" target="_blank">'+
@@ -37,7 +37,7 @@ $(function(){
                 apiCaseList.append(
                     '<li>'+
                         '<div class="pic">'+
-                            '<img alt="" src="http://wevas.info/frozen_case/Public/'+data[i].img+'.jpg" width="160">'+
+                            '<img alt="" src="http://61.142.65.166/frozen_case/Public/'+data[i].img+'.jpg" width="160">'+
                         '</div>'+
                         '<div class="cwfqr" data-url="'+data[i].url+'">'+
                             '<a href="'+data[i].url+'" target="_blank">'+
